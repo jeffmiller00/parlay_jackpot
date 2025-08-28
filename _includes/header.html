@@ -1,0 +1,39 @@
+<header class="site-header">
+  <div class="inner">
+    <div class="branding">
+      <a class="logo" href="{{ '/' | relative_url }}" aria-label="Home">
+        <!-- Cheeky Parlay Ticket + Money SVG Logo (CC0 custom) -->
+        <svg class="logo-mark" width="38" height="38" viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2ea043" />
+              <stop offset="100%" stop-color="#15803d" />
+            </linearGradient>
+            <linearGradient id="lg2" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#facc15" />
+              <stop offset="100%" stop-color="#d97706" />
+            </linearGradient>
+          </defs>
+          <!-- Ticket -->
+          <path d="M10 14h30v6a4 4 0 1 0 0 8v6H10V34a4 4 0 1 0 0-8v-6z" fill="url(#lg1)" stroke="#1f6f34"
+            stroke-width="2" stroke-linejoin="round" />
+          <!-- Coin stack -->
+          <ellipse cx="46" cy="30" rx="12" ry="6" fill="#facc15" stroke="#b45309" stroke-width="2" />
+          <path d="M34 30v10c0 3.3 5.4 6 12 6s12-2.7 12-6V30" fill="url(#lg2)" stroke="#b45309" stroke-width="2" />
+          <!-- Fun spark -->
+          <path d="M20 10l2-4 2 4 4 2-4 2-2 4-2-4-4-2z" fill="#facc15" opacity=".9" />
+          <!-- Subtle poo emoji hint for worst pick humor -->
+          <text x="42" y="18" font-size="12" text-anchor="middle">💩</text>
+        </svg>
+        <span class="site-title">Parlay Jackpot</span>
+      </a>
+    </div>
+    <nav aria-label="Primary" class="main-nav">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="#awards-heading">Awards</a></li>
+        <li><a href="#update-notes-heading">Updates</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

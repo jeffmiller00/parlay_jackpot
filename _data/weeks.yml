@@ -1,0 +1,145 @@
+weeks:
+  # - week: 18
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 17
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 16
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 15
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 14
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 13
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 12
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 11
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 10
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 9
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 8
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 7
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 6
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 5
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 4
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 3
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  # - week: 2
+  #   total_potential: 0
+  #   picks:
+  #     alice: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     bob:   { pick: TBD, status: pending, worst: false, odds: "" }
+  #     carol: { pick: TBD, status: pending, worst: false, odds: "" }
+  #     dave:  { pick: TBD, status: pending, worst: false, odds: "" }
+  #     erin:  { pick: TBD, status: pending, worst: false, odds: "" }
+  - week: 1
+    total_potential: 0
+    picks:
+      alice: { pick: Something good, status: won, worst: false, odds: "+100" }
+      bob: { pick: TBD, status: pending, worst: false, odds: "" }
+      carol: { pick: Something bad, status: lost, worst: true, odds: "-110" }
+      dave: { pick: TBD, status: pending, worst: false, odds: "" }
+      erin: { pick: TBD, status: pending, worst: false, odds: "" }
