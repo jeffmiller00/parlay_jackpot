@@ -19,14 +19,14 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Parlay Jackpot Tracker
-email: your-email@example.com
+email: jeffmiller00@gmail.com
 description: >-
   Tracking large parlay picks across the NFL regular season: weekly picks,
   outcomes, awards and bragging rights.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: couchchamp
+github_username: jeffmiller00
 
 # Build settings
 plugins: []
@@ -36,16 +36,26 @@ google_analytics: G-XXXXXXXXXX
 
 # Player roster (ids used as keys in data files)
 players:
-  - id: alice
-    name: Alice
-  - id: bob
-    name: Bob
-  - id: carol
-    name: Carol
-  - id: dave
-    name: Dave
-  - id: erin
-    name: Erin
+  - id: andy
+    name: Andy
+  - id: adam
+    name: Adam
+  - id: sam
+    name: Sam
+  - id: jeff
+    name: Jeff
+  - id: mr_gaddi
+    name: Mr. Gaddi
+  - id: brad
+    name: Brad
+  - id: joe
+    name: Joe
+  - id: jma
+    name: JMA
+  - id: mike
+    name: Mike
+  - id: daniel
+    name: Daniel
 
 # Exclude from processing.
 # The following items will not be processed, by default.
