@@ -24,7 +24,7 @@ description: >-
   Tracking large parlay picks across the NFL regular season: weekly picks,
   outcomes, awards and bragging rights.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.parlayluck.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: couchchamp
 github_username: jeffmiller00
 
@@ -32,7 +32,7 @@ github_username: jeffmiller00
 plugins: []
 
 # Google Analytics (replace with real GA4 ID: G-XXXXXXXXXX)
-google_analytics: G-XXXXXXXXXX
+google_analytics: G-17FTG73YL9
 
 # Player roster (ids used as keys in data files)
 players:
