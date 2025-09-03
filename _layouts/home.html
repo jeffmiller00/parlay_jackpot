@@ -17,15 +17,43 @@ layout: default
     <table class="parlay-table" aria-describedby="weekly-tracker-caption">
       <thead>
         <tr>
+          <th scope="col" class="total-col sticky-total" aria-label="Total potential payout for the week">Potential ($)
+          </th>
           <th scope="col">Week</th>
           {% for p in players %}<th scope="col">{{ p.name }}</th>{% endfor %}
-          <th scope="col" class="total-col">Potential ($)</th>
         </tr>
       </thead>
       <tbody>
+        {% assign max_potential = 0 %}
+        {% for w in weeks %}{% if w.total_potential and w.total_potential > max_potential %}{% assign max_potential =
+        w.total_potential %}{% endif %}{% endfor %}
         {% for w in weeks %}
-        <tr>
-          <th scope="row">{{ w.week }}</th>
+        {% assign highlight = '' %}
+        {% if w.total_potential == max_potential and max_potential > 0 %}{% assign highlight = 'is-max' %}{% endif %}
+        {%- comment -%} Compute week status if not explicitly provided {%- endcomment -%}
+        {% assign won_count = 0 %}
+        {% assign lost_count = 0 %}
+        {% assign total_picks = 0 %}
+        {% for p in players %}
+        {% assign pick = w.picks[p.id] %}
+        {% if pick %}
+        {% assign total_picks = total_picks | plus: 1 %}
+        {% if pick.status == 'won' %}{% assign won_count = won_count | plus: 1 %}{% endif %}
+        {% if pick.status == 'lost' %}{% assign lost_count = lost_count | plus: 1 %}{% endif %}
+        {% endif %}
+        {% endfor %}
+        {% assign total_players = players | size %}
+        {% assign week_status = 'pending' %}
+        {% if lost_count > 0 %}
+        {% assign week_status = 'lost' %}
+        {% elsif total_picks == total_players and won_count == total_players and total_players > 0 %}
+        {% assign week_status = 'won' %}
+        {% endif %}
+        <tr class="week-row week-status-{{ week_status }}">
+          <td class="total-col potential-cell {{ highlight }} week-status-{{ week_status }}"
+            aria-label="Week {{ w.week }} total potential ${{ w.total_potential | default: 0 | number_with_commas }} status {{ week_status }}">
+            ${{ w.total_potential | default: 0 | number_with_commas }}</td>
+          <th scope="row" id="week-{{ w.week }}">{{ w.week }}</th>
           {% for p in players %}
           {% assign pick = w.picks[p.id] %}
           {% if pick %}
@@ -42,7 +70,6 @@ layout: default
           <td class="pick-cell status-pending empty">—</td>
           {% endif %}
           {% endfor %}
-          <td class="total-col">{{ w.total_potential | default: 0 }}</td>
         </tr>
         {% endfor %}
       </tbody>
@@ -81,22 +108,22 @@ max_worsts>0 %}{{ p.name }}, {% endif %}{% endfor %}{% endcapture %}
   <h2 id="awards-heading">Awards</h2>
   <div class="awards-grid">
     <div class="award-card">
-  <h3>✅ Most Correct Picks</h3>
+      <h3>✅ Most Correct Picks</h3>
       {% if max_wins > 0 %}<p>{{ most_correct }} <span class="stat">({{ max_wins }})</span></p>{% else %}<p
         class="pending-award">No wins yet.</p>{% endif %}
     </div>
     <div class="award-card">
-  <h3>❌ Most Incorrect Picks</h3>
+      <h3>❌ Most Incorrect Picks</h3>
       {% if max_losses > 0 %}<p>{{ most_incorrect }} <span class="stat">({{ max_losses }})</span></p>{% else %}<p
         class="pending-award">No losses yet.</p>{% endif %}
     </div>
     <div class="award-card">
-  <h3>💩 Most Worst Pick Votes</h3>
+      <h3>💩 Most Worst Pick Votes</h3>
       {% if max_worsts > 0 %}<p>{{ most_worst }} <span class="stat">({{ max_worsts }})</span></p>{% else %}<p
         class="pending-award">No votes yet.</p>{% endif %}
     </div>
     <div class="award-card placeholder">
-  <h3>🚀 Biggest Longshot Hit</h3>
+      <h3>🚀 Biggest Longshot Hit</h3>
       <p class="pending-award">(Define later)</p>
     </div>
   </div>

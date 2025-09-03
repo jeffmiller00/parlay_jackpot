@@ -195,6 +195,59 @@ table.parlay-table .total-col {
   white-space: nowrap;
 }
 
+/* Sticky, emphasized Potential column (now first) */
+.parlay-table .sticky-total,
+.parlay-table .potential-cell {
+  position: sticky;
+  left: 0;
+  background: #222830;
+  /* slightly distinct from row backgrounds */
+  z-index: 3;
+  font-weight: 700;
+  font-size: .9rem;
+  color: #f0f6fc;
+  box-shadow: 4px 0 6px -4px rgba(0, 0, 0, .55), inset -1px 0 0 #30363d;
+}
+
+/* Ensure header cell sits above body cells */
+.parlay-table thead .sticky-total {
+  z-index: 5;
+  background: linear-gradient(#27303a, #222830);
+}
+
+/* Highlight the max potential value */
+.parlay-table .potential-cell.is-max {
+  background: linear-gradient(135deg, #004e89, #002d52);
+  color: #ffffff;
+  box-shadow: 0 0 0 1px #0d6efd inset, 4px 0 8px -4px rgba(0, 80, 160, 0.6);
+}
+
+/* Week status coloring for potential cell */
+.parlay-table .potential-cell.week-status-pending:not(.is-max) {
+  background: #222830;
+}
+
+.parlay-table .potential-cell.week-status-won:not(.is-max) {
+  background: linear-gradient(135deg, #1b4723, #12301a);
+  color: #3fb950;
+  box-shadow: inset 0 0 0 1px #2ea043;
+}
+
+/* Week status overrides (higher specificity) */
+.parlay-table tr.week-status-won .potential-cell {
+  background: linear-gradient(135deg, #1b4723, #12301a) !important;
+  color: #3fb950 !important;
+  box-shadow: inset 0 0 0 1px #2ea043, 4px 0 6px -4px rgba(0,0,0,.55);
+}
+.parlay-table tr.week-status-lost .potential-cell {
+  background: linear-gradient(135deg, #4d1e1e, #301414) !important;
+  color: #ff7b72 !important;
+  box-shadow: inset 0 0 0 1px #f85149, 4px 0 6px -4px rgba(0,0,0,.55);
+}
+.parlay-table tr.week-status-pending .potential-cell:not(.is-max) {
+  background: #222830;
+}
+
 .pick-main {
   font-weight: 500;
 }

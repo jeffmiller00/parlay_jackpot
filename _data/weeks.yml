@@ -221,75 +221,55 @@ weeks:
   #     mike: { pick: _, status: pending, worst: false, odds: "" }
   #     daniel: { pick: _, status: pending, worst: false, odds: "" }
   - week: 1
-    total_potential: 0
+    total_potential: 1798.42
     picks:
       andy:
-        {
-          pick: Puka to have more than 5.5 receptions,
-          status: pending,
-          worst: false,
-          odds: "-158",
-        }
+        pick: "Puka to have more than 5.5 receptions"
+        status: "pending"
+        worst: false
+        odds: "-158"
       adam:
-        {
-          pick: Joe Flacco Over 235.5 pass yards,
-          status: pending,
-          worst: false,
-          odds: "-114",
-        }
+        pick: "Joe Flacco Over 235.5 pass yards"
+        status: "pending"
+        worst: false
+        odds: "-114"
       sam:
-        {
-          pick: Barkley Anytime TD,
-          status: pending,
-          worst: false,
-          odds: "-195",
-        }
+        pick: "Barkley Anytime TD"
+        status: "pending"
+        worst: false
+        odds: "-195"
       jeff:
-        {
-          pick: Wisconsin/Middle TN Under 45.5,
-          status: pending,
-          worst: false,
-          odds: "-115",
-        }
+        pick: "Wisconsin/Middle TN Under 45.5"
+        status: "pending"
+        worst: false
+        odds: "-115"
       mr_gaddi:
-        {
-          pick: Christian McCaffery anytime TD,
-          status: pending,
-          worst: false,
-          odds: "-145",
-        }
+        pick: "Christian McCaffery anytime TD"
+        status: "pending"
+        worst: false
+        odds: "-145"
       brad:
-        {
-          pick: Bears first drive punt,
-          status: pending,
-          worst: false,
-          odds: "",
-        }
+        pick: "Bears first drive punt"
+        status: "pending"
+        worst: false
+        odds: ""
       joe:
-        {
-          pick: _,
-          status: "Trey McBride 40+ Receiving Yards",
-          worst: false,
-          odds: "",
-        }
+        pick: "Trey McBride 40+ Receiving Yards"
+        status: "pending"
+        worst: false
+        odds: ""
       jma:
-        {
-          pick: "Bears/Vikings 1st qtr over +7.5",
-          status: pending,
-          worst: false,
-          odds: "+102",
-        }
+        pick: "Bears/Vikings 1st qtr over +7.5"
+        status: "pending"
+        worst: false
+        odds: "+102"
       mike:
-        {
-          pick: TreVon Henderson over 2.5 rec,
-          status: pending,
-          worst: false,
-          odds: "",
-        }
+        pick: "TreVon Henderson over 2.5 rec"
+        status: "pending"
+        worst: false
+        odds: ""
       daniel:
-        {
-          pick: "Cooper Kupp over 38.5",
-          status: pending,
-          worst: false,
-          odds: "-114",
-        }
+        pick: "Cooper Kupp over 38.5"
+        status: "pending"
+        worst: false
+        odds: "-114"
