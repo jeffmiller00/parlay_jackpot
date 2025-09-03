@@ -12,6 +12,41 @@ layout: default
 
 {% if players and weeks %}
 <section aria-labelledby="weekly-tracker-heading" class="tracker-section">
+  <div class="weekly-summary" aria-labelledby="weekly-summary-heading">
+    <h2 id="weekly-summary-heading">Weekly Summary</h2>
+    <div class="weekly-potential-bar" aria-label="Weekly potential overview">
+      {% assign max_potential = 0 %}
+      {% for w in weeks %}{% if w.total_potential and w.total_potential > max_potential %}{% assign max_potential =
+      w.total_potential %}{% endif %}{% endfor %}
+      {% for w in weeks %}
+      {%- assign won_count = 0 -%}
+      {%- assign lost_count = 0 -%}
+      {%- assign total_picks = 0 -%}
+      {%- for p in players -%}
+      {%- assign pick = w.picks[p.id] -%}
+      {%- if pick -%}
+      {%- assign total_picks = total_picks | plus: 1 -%}
+      {%- if pick.status == 'won' -%}{%- assign won_count = won_count | plus: 1 -%}{%- endif -%}
+      {%- if pick.status == 'lost' -%}{%- assign lost_count = lost_count | plus: 1 -%}{%- endif -%}
+      {%- endif -%}
+      {%- endfor -%}
+      {%- assign total_players = players | size -%}
+      {%- assign wk_status = 'pending' -%}
+      {%- if lost_count > 0 -%}
+      {%- assign wk_status = 'lost' -%}
+      {%- elsif total_picks == total_players and won_count == total_players and total_players > 0 -%}
+      {%- assign wk_status = 'won' -%}
+      {%- endif -%}
+      {%- assign is_max = '' -%}
+      {%- if w.total_potential == max_potential and max_potential > 0 -%}{%- assign is_max = 'is-max' -%}{%- endif -%}
+      <a href="#week-{{ w.week }}" class="pot-chip pot-status-{{ wk_status }} {{ is_max }}"
+        aria-label="Go to week {{ w.week }} potential ${{ w.total_potential | default: 0 | number_with_commas }} status {{ wk_status }}">
+        <span class="pot-chip-week">W{{ w.week }}</span>
+        <span class="pot-chip-value">${{ w.total_potential | default: 0 | number_with_commas }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
   <h2 id="weekly-tracker-heading">Weekly Picks</h2>
   <div class="table-wrapper">
     <table class="parlay-table" aria-describedby="weekly-tracker-caption">

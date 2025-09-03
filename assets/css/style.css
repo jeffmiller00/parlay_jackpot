@@ -145,6 +145,105 @@ h2 {
   font-size: .95rem;
 }
 
+/* Weekly potential summary bar */
+.weekly-potential-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .6rem;
+  margin-top: .75rem;
+  margin-bottom: .25rem;
+}
+
+.weekly-summary {
+  margin-top: 1.75rem;
+}
+
+.weekly-summary>h2 {
+  margin: 0 0 .4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: #e6edf3;
+}
+
+.pot-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .4rem .65rem .38rem;
+  border-radius: 999px;
+  background: #222830;
+  color: #e6edf3;
+  font-size: .6rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: .5px;
+  box-shadow: 0 0 0 1px #30363d;
+  transition: background .18s, box-shadow .18s, color .18s;
+}
+
+.pot-chip:hover {
+  background: #2b333d;
+  box-shadow: 0 0 0 1px #3a444f, 0 2px 6px -2px rgba(0, 0, 0, .45);
+}
+
+.pot-chip .pot-chip-week {
+  background: #30363d;
+  padding: 2px 6px 3px;
+  border-radius: 999px;
+  font-weight: 500;
+  color: #8b949e;
+}
+
+.pot-chip.is-max {
+  box-shadow: 0 0 0 1px #0d6efd, 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+/* Status variants */
+.pot-chip.pot-status-won {
+  background: linear-gradient(135deg, #1b4723, #12301a);
+  box-shadow: 0 0 0 1px #2ea043;
+  color: #3fb950;
+}
+
+.pot-chip.pot-status-won .pot-chip-week {
+  background: #2a6032;
+  color: #c6f6d5;
+}
+
+.pot-chip.pot-status-lost {
+  background: linear-gradient(135deg, #4d1e1e, #301414);
+  box-shadow: 0 0 0 1px #f85149;
+  color: #ff7b72;
+}
+
+.pot-chip.pot-status-lost .pot-chip-week {
+  background: #6d2a2a;
+  color: #ffd6d1;
+}
+
+.pot-chip.pot-status-pending {
+  background: linear-gradient(135deg, #30363d, #20262d);
+  color: #d0d4d8;
+}
+
+.pot-chip.pot-status-pending .pot-chip-week {
+  background: #3a4149;
+  color: #9ca3af;
+}
+
+@media (max-width: 640px) {
+  .pot-chip {
+    font-size: .55rem;
+    padding: .38rem .55rem .35rem;
+  }
+
+  .pot-chip .pot-chip-week {
+    padding: 2px 5px 3px;
+  }
+}
+
 .table-wrapper {
   overflow-x: auto;
   box-shadow: 0 0 0 1px #30363d;
@@ -237,13 +336,15 @@ table.parlay-table .total-col {
 .parlay-table tr.week-status-won .potential-cell {
   background: linear-gradient(135deg, #1b4723, #12301a) !important;
   color: #3fb950 !important;
-  box-shadow: inset 0 0 0 1px #2ea043, 4px 0 6px -4px rgba(0,0,0,.55);
+  box-shadow: inset 0 0 0 1px #2ea043, 4px 0 6px -4px rgba(0, 0, 0, .55);
 }
+
 .parlay-table tr.week-status-lost .potential-cell {
   background: linear-gradient(135deg, #4d1e1e, #301414) !important;
   color: #ff7b72 !important;
-  box-shadow: inset 0 0 0 1px #f85149, 4px 0 6px -4px rgba(0,0,0,.55);
+  box-shadow: inset 0 0 0 1px #f85149, 4px 0 6px -4px rgba(0, 0, 0, .55);
 }
+
 .parlay-table tr.week-status-pending .potential-cell:not(.is-max) {
   background: #222830;
 }

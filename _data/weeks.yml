@@ -212,7 +212,7 @@ weeks:
   #   picks:
   #     andy: { pick: _, status: pending, worst: false, odds: "" }
   #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
+  #     sam: { pick: _, status: pending, worst: false, odds: "" }
   #     jeff: { pick: _, status: pending, worst: false, odds: "" }
   #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
   #     brad: { pick: _, status: pending, worst: false, odds: "" }
