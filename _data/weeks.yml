@@ -223,7 +223,13 @@ weeks:
   - week: 1
     total_potential: 0
     picks:
-      andy: { pick: _, status: pending, worst: false, odds: "" }
+      andy:
+        {
+          pick: Puka to have more than 5.5 receptions,
+          status: pending,
+          worst: false,
+          odds: "-158",
+        }
       adam:
         {
           pick: Joe Flacco Over 235.5 pass yards,
@@ -238,8 +244,20 @@ weeks:
           worst: false,
           odds: "-195",
         }
-      jeff: { pick: _, status: pending, worst: false, odds: "" }
-      mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
+      jeff:
+        {
+          pick: Wisconsin/Middle TN Under 45.5,
+          status: pending,
+          worst: false,
+          odds: "-115",
+        }
+      mr_gaddi:
+        {
+          pick: Christian McCaffery anytime TD,
+          status: pending,
+          worst: false,
+          odds: "-145",
+        }
       brad:
         {
           pick: Bears first drive punt,
@@ -261,7 +279,13 @@ weeks:
           worst: false,
           odds: "+102",
         }
-      mike: { pick: _, status: pending, worst: false, odds: "" }
+      mike:
+        {
+          pick: TreVon Henderson over 2.5 rec,
+          status: pending,
+          worst: false,
+          odds: "",
+        }
       daniel:
         {
           pick: "Cooper Kupp over 38.5",
