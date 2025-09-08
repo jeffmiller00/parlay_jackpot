@@ -225,12 +225,12 @@ weeks:
     picks:
       andy:
         pick: "Puka to have more than 5.5 receptions"
-        status: "pending"
+        status: "won"
         worst: false
         odds: "-158"
       adam:
         pick: "Joe Flacco Over 235.5 pass yards"
-        status: "pending"
+        status: "won"
         worst: false
         odds: "-114"
       sam:
@@ -245,7 +245,7 @@ weeks:
         odds: "-115"
       mr_gaddi:
         pick: "Christian McCaffery anytime TD"
-        status: "pending"
+        status: "lost"
         worst: false
         odds: "-145"
       brad:
@@ -255,7 +255,7 @@ weeks:
         odds: ""
       joe:
         pick: "Trey McBride 40+ Receiving Yards"
-        status: "pending"
+        status: "won"
         worst: false
         odds: ""
       jma:
@@ -265,11 +265,11 @@ weeks:
         odds: "+102"
       mike:
         pick: "TreVon Henderson over 2.5 rec"
-        status: "pending"
+        status: "won"
         worst: false
         odds: ""
       daniel:
         pick: "Cooper Kupp over 38.5"
-        status: "pending"
+        status: "lost"
         worst: false
         odds: "-114"
