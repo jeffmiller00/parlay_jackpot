@@ -241,7 +241,7 @@ weeks:
       jeff:
         pick: "Wisconsin/Middle TN Under 45.5"
         status: "lost"
-        worst: false
+        worst: true
         odds: "-115"
       mr_gaddi:
         pick: "Christian McCaffery anytime TD"

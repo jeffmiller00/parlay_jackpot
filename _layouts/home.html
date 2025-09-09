@@ -1,165 +1,241 @@
 ---
 layout: default
 ---
+{%- comment -%}
+  Refactored to consolidate Liquid logic near the top. Heavy computations (week status, potentials, awards, streaks)
+  are performed once and stored in captured strings for cleaner markup below.
+{%- endcomment -%}
+
 <section>
   <h1>Parlay Jackpot Tracker</h1>
-  <p class="tagline">Follow the big swings all season long. Update picks each week and watch the wins & losses color in.
-  </p>
+  <p class="tagline">Follow the big swings all season long. Update picks each week and watch the wins & losses color in.</p>
 </section>
 
 {% assign players = site.players %}
 {% assign weeks = site.data.weeks.weeks %}
 
 {% if players and weeks %}
-<section aria-labelledby="weekly-tracker-heading" class="tracker-section">
-  <div class="weekly-summary" aria-labelledby="weekly-summary-heading">
-    <h2 id="weekly-summary-heading">Weekly Summary</h2>
-    <div class="weekly-potential-bar" aria-label="Weekly potential overview">
-      {% assign max_potential = 0 %}
-      {% for w in weeks %}{% if w.total_potential and w.total_potential > max_potential %}{% assign max_potential =
-      w.total_potential %}{% endif %}{% endfor %}
-      {% for w in weeks %}
-      {%- assign won_count = 0 -%}
-      {%- assign lost_count = 0 -%}
-      {%- assign total_picks = 0 -%}
-      {%- for p in players -%}
+  {%- comment -%} Pre-compute max potential {%- endcomment -%}
+  {% assign max_potential = 0 %}
+  {% for w in weeks %}
+    {% if w.total_potential and w.total_potential > max_potential %}
+      {% assign max_potential = w.total_potential %}
+    {% endif %}
+  {% endfor %}
+
+  {%- comment -%} Build weekly summary chips & table rows in a single pass {%- endcomment -%}
+  {% assign weekly_summary_chips = '' %}
+  {% assign table_body_rows = '' %}
+  {% assign total_players = players | size %}
+  {% for w in weeks %}
+    {%- assign won_count = 0 -%}
+    {%- assign lost_count = 0 -%}
+    {%- assign total_picks = 0 -%}
+    {%- for p in players -%}
       {%- assign pick = w.picks[p.id] -%}
       {%- if pick -%}
-      {%- assign total_picks = total_picks | plus: 1 -%}
-      {%- if pick.status == 'won' -%}{%- assign won_count = won_count | plus: 1 -%}{%- endif -%}
-      {%- if pick.status == 'lost' -%}{%- assign lost_count = lost_count | plus: 1 -%}{%- endif -%}
+        {%- assign total_picks = total_picks | plus: 1 -%}
+        {%- if pick.status == 'won' -%}{%- assign won_count = won_count | plus: 1 -%}{%- endif -%}
+        {%- if pick.status == 'lost' -%}{%- assign lost_count = lost_count | plus: 1 -%}{%- endif -%}
       {%- endif -%}
-      {%- endfor -%}
-      {%- assign total_players = players | size -%}
-      {%- assign wk_status = 'pending' -%}
-      {%- if lost_count > 0 -%}
-      {%- assign wk_status = 'lost' -%}
-      {%- elsif total_picks == total_players and won_count == total_players and total_players > 0 -%}
-      {%- assign wk_status = 'won' -%}
-      {%- endif -%}
-      {%- assign is_max = '' -%}
-      {%- if w.total_potential == max_potential and max_potential > 0 -%}{%- assign is_max = 'is-max' -%}{%- endif -%}
-      <a href="#week-{{ w.week }}" class="pot-chip pot-status-{{ wk_status }} {{ is_max }}"
-        aria-label="Go to week {{ w.week }} potential ${{ w.total_potential | default: 0 | number_with_commas }} status {{ wk_status }}">
+    {%- endfor -%}
+    {%- assign week_status = 'pending' -%}
+    {%- if lost_count > 0 -%}
+      {%- assign week_status = 'lost' -%}
+    {%- elsif total_picks == total_players and won_count == total_players and total_players > 0 -%}
+      {%- assign week_status = 'won' -%}
+    {%- endif -%}
+    {%- assign highlight = '' -%}
+    {%- if w.total_potential == max_potential and max_potential > 0 -%}{%- assign highlight = 'is-max' -%}{%- endif -%}
+
+    {%- comment -%} Summary chip {%- endcomment -%}
+    {% capture chip %}
+      <a href="#week-{{ w.week }}" class="pot-chip pot-status-{{ week_status }} {{ highlight }}" aria-label="Go to week {{ w.week }} potential ${{ w.total_potential | default: 0 | number_with_commas }} status {{ week_status }}">
         <span class="pot-chip-week">W{{ w.week }}</span>
         <span class="pot-chip-value">${{ w.total_potential | default: 0 | number_with_commas }}</span>
       </a>
-      {% endfor %}
-    </div>
+    {% endcapture %}
+    {% assign weekly_summary_chips = weekly_summary_chips | append: chip %}
+
+    {%- comment -%} Table row {%- endcomment -%}
+    {% capture row %}
+      <tr class="week-row week-status-{{ week_status }}">
+        <td class="total-col potential-cell {{ highlight }} week-status-{{ week_status }}" aria-label="Week {{ w.week }} total potential ${{ w.total_potential | default: 0 | number_with_commas }} status {{ week_status }}">${{ w.total_potential | default: 0 | number_with_commas }}</td>
+        <th scope="row" id="week-{{ w.week }}">{{ w.week }}</th>
+        {% for p in players %}
+          {% assign pick = w.picks[p.id] %}
+          {% if pick %}
+            {% capture status_class %}status-{{ pick.status | default: 'pending' }}{% endcapture %}
+            {% if pick.worst %}{% assign status_class = status_class | append: ' worst-pick' %}{% endif %}
+            <td class="pick-cell {{ status_class }}">
+              <div class="pick-main">{{ pick.pick | default: '—' }}</div>
+              <div class="meta">
+                {% if pick.odds %}<span class="odds">{{ pick.odds }}</span>{% endif %}
+                {% if pick.worst %}<span class="worst-flag" title="Worst Pick">💩</span>{% endif %}
+              </div>
+            </td>
+          {% else %}
+            <td class="pick-cell status-pending empty">—</td>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    {% endcapture %}
+    {% assign table_body_rows = table_body_rows | append: row %}
+  {% endfor %}
+
+  {%- comment -%} Awards & streak metrics {%- endcomment -%}
+  {% assign max_wins = 0 %}{% assign max_losses = 0 %}{% assign max_worsts = 0 %}
+  {% assign player_stats = '' %}
+  {% for p in players %}
+    {% assign wins = 0 %}{% assign losses = 0 %}{% assign worsts = 0 %}
+    {% for w in weeks %}
+      {% assign pick = w.picks[p.id] %}
+      {% if pick %}
+        {% if pick.status == 'won' %}{% assign wins = wins | plus: 1 %}{% endif %}
+        {% if pick.status == 'lost' %}{% assign losses = losses | plus: 1 %}{% endif %}
+        {% if pick.worst %}{% assign worsts = worsts | plus: 1 %}{% endif %}
+      {% endif %}
+    {% endfor %}
+    {% if wins > max_wins %}{% assign max_wins = wins %}{% endif %}
+    {% if losses > max_losses %}{% assign max_losses = losses %}{% endif %}
+    {% if worsts > max_worsts %}{% assign max_worsts = worsts %}{% endif %}
+    {% capture player_stats %}{{ player_stats }}{{ p.name }}:{{ wins }}:{{ losses }}:{{ worsts }}|{% endcapture %}
+  {% endfor %}
+
+  {% assign most_correct = '' %}
+  {% assign most_incorrect = '' %}
+  {% assign most_worst = '' %}
+  {% assign stats_entries = player_stats | split:'|' %}
+  {% for entry in stats_entries %}
+    {% if entry != '' and entry contains ':' %}
+      {% assign parts = entry | split:':' %}
+      {% assign name = parts[0] %}
+      {% assign wins_val = parts[1] | plus:0 %}
+      {% assign losses_val = parts[2] | plus:0 %}
+      {% assign worsts_val = parts[3] | plus:0 %}
+      {% if wins_val == max_wins and max_wins > 0 %}
+        {% if most_correct != '' %}{% assign most_correct = most_correct | append:', ' %}{% endif %}
+        {% assign most_correct = most_correct | append:name %}
+      {% endif %}
+      {% if losses_val == max_losses and max_losses > 0 %}
+        {% if most_incorrect != '' %}{% assign most_incorrect = most_incorrect | append:', ' %}{% endif %}
+        {% assign most_incorrect = most_incorrect | append:name %}
+      {% endif %}
+      {% if worsts_val == max_worsts and max_worsts > 0 %}
+        {% if most_worst != '' %}{% assign most_worst = most_worst | append:', ' %}{% endif %}
+        {% assign most_worst = most_worst | append:name %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {%- comment -%} Streak calculations {%- endcomment -%}
+  {% assign longest_win_streak = 0 %}
+  {% assign longest_loss_streak = 0 %}
+  {% assign win_streak_names = '' %}
+  {% assign loss_streak_names = '' %}
+  {% assign sorted_weeks = weeks | sort: 'week' %}
+  {% for p in players %}
+    {% assign player_current_win = 0 %}
+    {% assign player_current_loss = 0 %}
+    {% assign player_longest_win = 0 %}
+    {% assign player_longest_loss = 0 %}
+    {% for w in sorted_weeks %}
+      {% assign pick = w.picks[p.id] %}
+      {% if pick and pick.status == 'won' %}
+        {% assign player_current_win = player_current_win | plus: 1 %}
+        {% if player_current_win > player_longest_win %}{% assign player_longest_win = player_current_win %}{% endif %}
+        {% assign player_current_loss = 0 %}
+      {% elsif pick and pick.status == 'lost' %}
+        {% assign player_current_loss = player_current_loss | plus: 1 %}
+        {% if player_current_loss > player_longest_loss %}{% assign player_longest_loss = player_current_loss %}{% endif %}
+        {% assign player_current_win = 0 %}
+      {% else %}
+        {% assign player_current_win = 0 %}
+        {% assign player_current_loss = 0 %}
+      {% endif %}
+    {% endfor %}
+    {% if player_longest_win > longest_win_streak %}
+      {% assign longest_win_streak = player_longest_win %}
+      {% assign win_streak_names = p.name | append: '|' %}
+    {% elsif player_longest_win == longest_win_streak and player_longest_win > 0 %}
+      {% assign win_streak_names = win_streak_names | append: p.name | append: '|' %}
+    {% endif %}
+    {% if player_longest_loss > longest_loss_streak %}
+      {% assign longest_loss_streak = player_longest_loss %}
+      {% assign loss_streak_names = p.name | append: '|' %}
+    {% elsif player_longest_loss == longest_loss_streak and player_longest_loss > 0 %}
+      {% assign loss_streak_names = loss_streak_names | append: p.name | append: '|' %}
+    {% endif %}
+  {% endfor %}
+  {% assign win_display = '' %}
+  {% assign win_names_array = win_streak_names | split:'|' %}
+  {% for name in win_names_array %}
+    {% if name != '' %}
+      {% unless win_display contains name %}
+        {% if win_display != '' %}{% assign win_display = win_display | append:', ' %}{% endif %}
+        {% assign win_display = win_display | append:name %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  {% assign loss_display = '' %}
+  {% assign loss_names_array = loss_streak_names | split:'|' %}
+  {% for name in loss_names_array %}
+    {% if name != '' %}
+      {% unless loss_display contains name %}
+        {% if loss_display != '' %}{% assign loss_display = loss_display | append:', ' %}{% endif %}
+        {% assign loss_display = loss_display | append:name %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if players and weeks %}
+<section aria-labelledby="weekly-tracker-heading" class="tracker-section">
+  <div class="weekly-summary" aria-labelledby="weekly-summary-heading">
+    <h2 id="weekly-summary-heading">Weekly Summary</h2>
+    <div class="weekly-potential-bar" aria-label="Weekly potential overview">{{ weekly_summary_chips }}</div>
   </div>
   <h2 id="weekly-tracker-heading">Weekly Picks</h2>
   <div class="table-wrapper">
     <table class="parlay-table" aria-describedby="weekly-tracker-caption">
       <thead>
         <tr>
-          <th scope="col" class="total-col sticky-total" aria-label="Total potential payout for the week">Potential ($)
-          </th>
+          <th scope="col" class="total-col sticky-total" aria-label="Total potential payout for the week">Potential ($)</th>
           <th scope="col">Week</th>
           {% for p in players %}<th scope="col">{{ p.name }}</th>{% endfor %}
         </tr>
       </thead>
-      <tbody>
-        {% assign max_potential = 0 %}
-        {% for w in weeks %}{% if w.total_potential and w.total_potential > max_potential %}{% assign max_potential =
-        w.total_potential %}{% endif %}{% endfor %}
-        {% for w in weeks %}
-        {% assign highlight = '' %}
-        {% if w.total_potential == max_potential and max_potential > 0 %}{% assign highlight = 'is-max' %}{% endif %}
-        {%- comment -%} Compute week status if not explicitly provided {%- endcomment -%}
-        {% assign won_count = 0 %}
-        {% assign lost_count = 0 %}
-        {% assign total_picks = 0 %}
-        {% for p in players %}
-        {% assign pick = w.picks[p.id] %}
-        {% if pick %}
-        {% assign total_picks = total_picks | plus: 1 %}
-        {% if pick.status == 'won' %}{% assign won_count = won_count | plus: 1 %}{% endif %}
-        {% if pick.status == 'lost' %}{% assign lost_count = lost_count | plus: 1 %}{% endif %}
-        {% endif %}
-        {% endfor %}
-        {% assign total_players = players | size %}
-        {% assign week_status = 'pending' %}
-        {% if lost_count > 0 %}
-        {% assign week_status = 'lost' %}
-        {% elsif total_picks == total_players and won_count == total_players and total_players > 0 %}
-        {% assign week_status = 'won' %}
-        {% endif %}
-        <tr class="week-row week-status-{{ week_status }}">
-          <td class="total-col potential-cell {{ highlight }} week-status-{{ week_status }}"
-            aria-label="Week {{ w.week }} total potential ${{ w.total_potential | default: 0 | number_with_commas }} status {{ week_status }}">
-            ${{ w.total_potential | default: 0 | number_with_commas }}</td>
-          <th scope="row" id="week-{{ w.week }}">{{ w.week }}</th>
-          {% for p in players %}
-          {% assign pick = w.picks[p.id] %}
-          {% if pick %}
-          {% capture status_class %}status-{{ pick.status | default: 'pending' }}{% endcapture %}
-          {% if pick.worst %}{% assign status_class = status_class | append: ' worst-pick' %}{% endif %}
-          <td class="pick-cell {{ status_class }}">
-            <div class="pick-main">{{ pick.pick | default: '—' }}</div>
-            <div class="meta">
-              {% if pick.odds %}<span class="odds">{{ pick.odds }}</span>{% endif %}
-              {% if pick.worst %}<span class="worst-flag" title="Worst Pick">💩</span>{% endif %}
-            </div>
-          </td>
-          {% else %}
-          <td class="pick-cell status-pending empty">—</td>
-          {% endif %}
-          {% endfor %}
-        </tr>
-        {% endfor %}
-      </tbody>
+      <tbody>{{ table_body_rows }}</tbody>
     </table>
   </div>
 </section>
 {% else %}
-<p class="setup-hint">Add players in <code>_config.yml</code> and week data in <code>_data/weeks.yml</code>.</p>
+  <p class="setup-hint">Add players in <code>_config.yml</code> and week data in <code>_data/weeks.yml</code>.</p>
 {% endif %}
 
 {% if players and weeks %}
-{% assign max_wins = 0 %}{% assign max_losses = 0 %}{% assign max_worsts = 0 %}
-{% for p in players %}
-{% assign wins = 0 %}{% assign losses = 0 %}{% assign worsts = 0 %}
-{% for w in weeks %}{% assign pick = w.picks[p.id] %}{% if pick %}{% if pick.status == 'won' %}{% assign wins = wins |
-plus: 1 %}{% endif %}{% if pick.status == 'lost' %}{% assign losses = losses | plus: 1 %}{% endif %}{% if pick.worst
-%}{% assign worsts = worsts | plus: 1 %}{% endif %}{% endif %}{% endfor %}
-{% if wins > max_wins %}{% assign max_wins = wins %}{% endif %}
-{% if losses > max_losses %}{% assign max_losses = losses %}{% endif %}
-{% if worsts > max_worsts %}{% assign max_worsts = worsts %}{% endif %}
-{% endfor %}
-{% capture most_correct %}{% for p in players %}{% assign wins=0 %}{% for w in weeks %}{% assign pick=w.picks[p.id] %}{%
-if pick and pick.status=='won' %}{% assign wins=wins | plus:1 %}{% endif %}{% endfor %}{% if wins==max_wins and
-max_wins>0 %}{{ p.name }}, {% endif %}{% endfor %}{% endcapture %}
-{% capture most_incorrect %}{% for p in players %}{% assign losses=0 %}{% for w in weeks %}{% assign pick=w.picks[p.id]
-%}{% if pick and pick.status=='lost' %}{% assign losses=losses | plus:1 %}{% endif %}{% endfor %}{% if
-losses==max_losses and max_losses>0 %}{{ p.name }}, {% endif %}{% endfor %}{% endcapture %}
-{% capture most_worst %}{% for p in players %}{% assign worsts=0 %}{% for w in weeks %}{% assign pick=w.picks[p.id] %}{%
-if pick and pick.worst %}{% assign worsts=worsts | plus:1 %}{% endif %}{% endfor %}{% if worsts==max_worsts and
-max_worsts>0 %}{{ p.name }}, {% endif %}{% endfor %}{% endcapture %}
-{% assign most_correct = most_correct | split: ', ' | uniq | join: ', ' | replace: ', ,', '' %}
-{% assign most_incorrect = most_incorrect | split: ', ' | uniq | join: ', ' | replace: ', ,', '' %}
-{% assign most_worst = most_worst | split: ', ' | uniq | join: ', ' | replace: ', ,', '' %}
-
 <section aria-labelledby="awards-heading" class="awards-section">
   <h2 id="awards-heading">Awards</h2>
   <div class="awards-grid">
     <div class="award-card">
       <h3>✅ Most Correct Picks</h3>
-      {% if max_wins > 0 %}<p>{{ most_correct }} <span class="stat">({{ max_wins }})</span></p>{% else %}<p
-        class="pending-award">No wins yet.</p>{% endif %}
+      {% if max_wins > 0 %}<p>{{ most_correct }} <span class="stat">({{ max_wins }})</span></p>{% else %}<p class="pending-award">No wins yet.</p>{% endif %}
     </div>
     <div class="award-card">
       <h3>❌ Most Incorrect Picks</h3>
-      {% if max_losses > 0 %}<p>{{ most_incorrect }} <span class="stat">({{ max_losses }})</span></p>{% else %}<p
-        class="pending-award">No losses yet.</p>{% endif %}
+      {% if max_losses > 0 %}<p>{{ most_incorrect }} <span class="stat">({{ max_losses }})</span></p>{% else %}<p class="pending-award">No losses yet.</p>{% endif %}
     </div>
     <div class="award-card">
       <h3>💩 Most Worst Pick Votes</h3>
-      {% if max_worsts > 0 %}<p>{{ most_worst }} <span class="stat">({{ max_worsts }})</span></p>{% else %}<p
-        class="pending-award">No votes yet.</p>{% endif %}
+      {% if max_worsts > 0 %}<p>{{ most_worst }} <span class="stat">({{ max_worsts }})</span></p>{% else %}<p class="pending-award">No votes yet.</p>{% endif %}
     </div>
-    <div class="award-card placeholder">
-      <h3>🚀 Biggest Longshot Hit</h3>
-      <p class="pending-award">(Define later)</p>
+    <div class="award-card">
+      <h3>🔥 Longest Win Streak</h3>
+      {% if longest_win_streak > 0 %}<p>{{ win_display }} <span class="stat">({{ longest_win_streak }})</span></p>{% else %}<p class="pending-award">No streak yet.</p>{% endif %}
+    </div>
+    <div class="award-card">
+      <h3>🧊 Longest Loss Streak</h3>
+      {% if longest_loss_streak > 0 %}<p>{{ loss_display }} <span class="stat">({{ longest_loss_streak }})</span></p>{% else %}<p class="pending-award">No streak yet.</p>{% endif %}
     </div>
   </div>
 </section>
