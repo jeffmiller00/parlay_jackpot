@@ -1,275 +1,109 @@
+---
+version: 1757450126
 weeks:
-  # - week: 18
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 17
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 16
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 15
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 14
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 13
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 12
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 11
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 10
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 9
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 8
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 7
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 6
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 5
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 4
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  # - week: 3
-  #   total_potential: 0
-  #   picks:
-  #     andy: { pick: _, status: pending, worst: false, odds: "" }
-  #     adam: { pick: _, status: pending, worst: false, odds: "" }
-  #     sam:  { pick: _, status: pending, worst: false, odds: "" }
-  #     jeff: { pick: _, status: pending, worst: false, odds: "" }
-  #     mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-  #     brad: { pick: _, status: pending, worst: false, odds: "" }
-  #     joe: { pick: _, status: pending, worst: false, odds: "" }
-  #     jma: { pick: _, status: pending, worst: false, odds: "" }
-  #     mike: { pick: _, status: pending, worst: false, odds: "" }
-  #     daniel: { pick: _, status: pending, worst: false, odds: "" }
-  - week: 2
-    total_potential: 0
-    picks:
-      andy: { pick: _, status: pending, worst: false, odds: "" }
-      adam: { pick: _, status: pending, worst: false, odds: "" }
-      sam: { pick: _, status: pending, worst: false, odds: "" }
-      jeff: { pick: _, status: pending, worst: false, odds: "" }
-      mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-      brad: { pick: _, status: pending, worst: false, odds: "" }
-      joe: { pick: _, status: pending, worst: false, odds: "" }
-      jma: { pick: _, status: pending, worst: false, odds: "" }
-      mike: { pick: _, status: pending, worst: false, odds: "" }
-      daniel: { pick: _, status: pending, worst: false, odds: "" }
-  - week: 1
-    total_potential: 1798.42
-    picks:
-      andy:
-        pick: "Puka to have more than 5.5 receptions"
-        status: "won"
-        worst: false
-        odds: "-158"
-      adam:
-        pick: "Joe Flacco Over 235.5 pass yards"
-        status: "won"
-        worst: false
-        odds: "-114"
-      sam:
-        pick: "Barkley Anytime TD"
-        status: "won"
-        worst: false
-        odds: "-195"
-      jeff:
-        pick: "Wisconsin/Middle TN Under 45.5"
-        status: "lost"
-        worst: true
-        odds: "-115"
-      mr_gaddi:
-        pick: "Christian McCaffery anytime TD"
-        status: "lost"
-        worst: false
-        odds: "-145"
-      brad:
-        pick: "Bears first drive punt"
-        status: "lost"
-        worst: false
-        odds: ""
-      joe:
-        pick: "Trey McBride 40+ Receiving Yards"
-        status: "won"
-        worst: false
-        odds: ""
-      jma:
-        pick: "Bears/Vikings 1st qtr over +7.5"
-        status: "lost"
-        worst: false
-        odds: "+102"
-      mike:
-        pick: "TreVon Henderson over 2.5 rec"
-        status: "won"
-        worst: false
-        odds: ""
-      daniel:
-        pick: "Cooper Kupp over 38.5"
-        status: "lost"
-        worst: false
-        odds: "-114"
+- week: 2
+  total_potential: 0
+  picks:
+    andy:
+      pick: Test Bet
+      status: pending
+      worst: false
+      odds: ''
+    adam:
+      pick: _
+      status: pending
+      worst: false
+      odds: ''
+    sam:
+      pick: _
+      status: pending
+      worst: false
+      odds: ''
+    jeff:
+      pick: _
+      status: pending
+      worst: false
+      odds: ''
+    mr_gaddi:
+      pick: _
+      status: pending
+      worst: false
+      odds: ''
+    brad:
+      pick: _
+      status: pending
+      worst: false
+      odds: ''
+    joe:
+      pick: _
+      status: pending
+      worst: false
+      odds: ''
+    jma:
+      pick: _
+      status: pending
+      worst: false
+      odds: ''
+    mike:
+      pick: _
+      status: pending
+      worst: false
+      odds: ''
+    daniel:
+      pick: _
+      status: pending
+      worst: false
+      odds: ''
+- week: 1
+  total_potential: 1798.42
+  picks:
+    andy:
+      pick: Puka to have more than 5.5 receptions
+      status: won
+      worst: false
+      odds: "-158"
+    adam:
+      pick: Joe Flacco Over 235.5 pass yards
+      status: won
+      worst: false
+      odds: "-114"
+    sam:
+      pick: Barkley Anytime TD
+      status: won
+      worst: false
+      odds: "-195"
+    jeff:
+      pick: Wisconsin/Middle TN Under 45.5
+      status: lost
+      worst: true
+      odds: "-115"
+    mr_gaddi:
+      pick: Christian McCaffery anytime TD
+      status: lost
+      worst: false
+      odds: "-145"
+    brad:
+      pick: Bears first drive punt
+      status: lost
+      worst: false
+      odds: ''
+    joe:
+      pick: Trey McBride 40+ Receiving Yards
+      status: won
+      worst: false
+      odds: ''
+    jma:
+      pick: Bears/Vikings 1st qtr over +7.5
+      status: lost
+      worst: false
+      odds: "+102"
+    mike:
+      pick: TreVon Henderson over 2.5 rec
+      status: won
+      worst: false
+      odds: ''
+    daniel:
+      pick: Cooper Kupp over 38.5
+      status: lost
+      worst: false
+      odds: "-114"
