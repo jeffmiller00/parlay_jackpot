@@ -250,7 +250,7 @@ weeks:
         odds: "-145"
       brad:
         pick: "Bears first drive punt"
-        status: "pending"
+        status: "lost"
         worst: false
         odds: ""
       joe:
@@ -260,7 +260,7 @@ weeks:
         odds: ""
       jma:
         pick: "Bears/Vikings 1st qtr over +7.5"
-        status: "pending"
+        status: "lost"
         worst: false
         odds: "+102"
       mike:
