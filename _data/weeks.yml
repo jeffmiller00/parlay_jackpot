@@ -1,11 +1,11 @@
 ---
-version: 1757450126
+version: 1757457061
 weeks:
 - week: 2
   total_potential: 0
   picks:
     andy:
-      pick: Test Bet
+      pick: _
       status: pending
       worst: false
       odds: ''
