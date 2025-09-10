@@ -29,10 +29,8 @@ require 'yaml'
 require 'fileutils'
 require 'typhoeus'
 require 'json'
-if jekyll.environment != 'production' || ENV['RACK_ENV'] != 'production'
-  require 'dotenv/load'
-  require 'pry'
-end
+require 'dotenv/load'
+require 'pry'
 
 
 DATA_FILE = File.expand_path('../_data/weeks.yml', __dir__)
