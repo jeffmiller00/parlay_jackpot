@@ -52,65 +52,76 @@ end
 
 
 puts '|==================================================='
-puts '|==================================================='
+puts '|=== SCRIPT START =================================='
 puts '|==================================================='
 
 boxscore_url = "https://www.espn.com/nfl/scoreboard/_/week/#{@current_week}/year/2025/seasontype/2"
 prompt = ''
 api_key = ENV['OPENAI_KEY'] || ENV['OPENAI_API_KEY']
 
-current_week.dig('picks').each do |name, pick_info|
-  next if pick_info['pick'] == '_'
-  next if ['won', 'loss'].include?(pick_info['status'])
+allowed_days = %w[Thursday Sunday Monday]
+unless allowed_days.include?(Date.today.strftime('%A'))
+  puts "| Today is #{Date.today.strftime('%A')} - skipping bet evaluation."
+  exit 0
+else
+  current_week.dig('picks').each do |name, pick_info|
+    if pick_info['pick'] == '_'
+      puts "| #{name} has not made a pick yet, skipping"
+      next
+    end
+    if ['won', 'loss'].include?(pick_info['status'])
+      puts "| #{name} already marked as #{pick_info['status']}, skipping"
+      next
+    end
 
-  puts "| #{name}: #{pick_info['pick']} (#{pick_info['status']})"
-  prompt = "Based on any of these box scores for Week ##{@current_week} of the NFL season: #{boxscore_url} Did this bet win? #{pick_info['pick']} Please respond only with JSON {result: true/false, rationale: \"...\" }"
+    puts "| #{name}: #{pick_info['pick']} (#{pick_info['status']})"
+    prompt = "Based on any of these box scores for Week ##{@current_week} of the NFL season: #{boxscore_url} Did this bet win? #{pick_info['pick']} Please respond only with JSON {result: true/false, rationale: \"...\" }"
 
-  if api_key.nil? || api_key.strip.empty?
-    puts '| Skipping OpenAI call (no OPENAI_KEY / OPENAI_API_KEY set)'
-  else
-    puts '| Calling OpenAI responses endpoint via Typhoeus'
-    request_body = {
-      model: 'gpt-5', # keep requested model name; change if unavailable
-      reasoning: { effort: "low" },
-      tools: [{"type": "web_search"}],
-      input: prompt
-    }
-    response = Typhoeus.post(
-      'https://api.openai.com/v1/responses',
-      headers: {
-        'Content-Type' => 'application/json',
-        'Authorization' => "Bearer #{api_key}"
-      },
-      body: JSON.dump(request_body),
-      timeout: 30
-    )
-    if response.timed_out?
-      puts '| OpenAI request timed out'
-    elsif !response.success?
-      puts "| OpenAI request failed (status #{response.code}): #{response.body[0,200]}"
+    if api_key.nil? || api_key.strip.empty?
+      puts '| Skipping OpenAI call (no OPENAI_KEY / OPENAI_API_KEY set)'
     else
-      begin
-        data = JSON.parse(response.body)
-        # Attempt to pull a plausible text field; fallback to raw snippet
-        text = data.dig('output').map{|o| o['content']}.compact.flatten.dig(0,'text') rescue nil
-        verdict = JSON.parse(text) if text
-        binding.pry
+      puts '| Calling OpenAI responses endpoint via Typhoeus'
+      request_body = {
+        model: 'gpt-5', # keep requested model name; change if unavailable
+        reasoning: { effort: "low" },
+        tools: [{"type": "web_search"}],
+        input: prompt
+      }
+      response = Typhoeus.post(
+        'https://api.openai.com/v1/responses',
+        headers: {
+          'Content-Type' => 'application/json',
+          'Authorization' => "Bearer #{api_key}"
+        },
+        body: JSON.dump(request_body),
+        timeout: 30
+      )
+      if response.timed_out?
+        puts '| OpenAI request timed out'
+      elsif !response.success?
+        puts "| OpenAI request failed (status #{response.code}): #{response.body[0,200]}"
+      else
+        begin
+          data = JSON.parse(response.body)
+          # Attempt to pull a plausible text field; fallback to raw snippet
+          text = data.dig('output').map{|o| o['content']}.compact.flatten.dig(0,'text') rescue nil
+          verdict = JSON.parse(text) if text
+          binding.pry
 
-        text ||= data['output'] if data['output'].is_a?(String)
-        text ||= response.body[0,300]
-        puts '| OpenAI response (truncated):'
-        puts text.lines.first(20).join
-      rescue => e
-        puts "| Failed to parse OpenAI JSON: #{e}"
+          text ||= data['output'] if data['output'].is_a?(String)
+          text ||= response.body[0,300]
+          puts '| OpenAI response (truncated):'
+          puts text.lines.first(20).join
+        rescue => e
+          puts "| Failed to parse OpenAI JSON: #{e}"
+        end
       end
     end
   end
 end
 
-
 puts '|==================================================='
-puts '|==================================================='
+puts '|=== SCRIPT END ===================================='
 puts '|==================================================='
 
 @content['version'] = Time.now.to_i
