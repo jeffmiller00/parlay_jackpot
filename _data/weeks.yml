@@ -1,11 +1,11 @@
 ---
-version: 1757457061
+version: 1757618495
 weeks:
 - week: 2
   total_potential: 0
   picks:
     andy:
-      pick: _
+      pick: Broncos -2.5
       status: pending
       worst: false
       odds: ''
@@ -15,7 +15,7 @@ weeks:
       worst: false
       odds: ''
     sam:
-      pick: _
+      pick: Jordan Love under 229 passing yards
       status: pending
       worst: false
       odds: ''
@@ -25,20 +25,20 @@ weeks:
       worst: false
       odds: ''
     mr_gaddi:
-      pick: _
+      pick: Josh Allen Anytime TD
       status: pending
       worst: false
-      odds: ''
+      odds: "-130"
     brad:
-      pick: _
+      pick: Bengals Win
       status: pending
       worst: false
-      odds: ''
+      odds: "-180"
     joe:
-      pick: _
+      pick: AJ Brown OVER 3.5 receptions
       status: pending
       worst: false
-      odds: ''
+      odds: "-278"
     jma:
       pick: _
       status: pending
@@ -50,7 +50,7 @@ weeks:
       worst: false
       odds: ''
     daniel:
-      pick: _
+      pick: Deebo Samuel over 4.5 catches
       status: pending
       worst: false
       odds: ''
