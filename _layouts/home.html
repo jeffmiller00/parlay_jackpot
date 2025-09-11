@@ -35,8 +35,8 @@ layout: default
       {%- assign pick = w.picks[p.id] -%}
       {%- if pick -%}
         {%- assign total_picks = total_picks | plus: 1 -%}
-        {%- if pick.status == 'won' -%}{%- assign won_count = won_count | plus: 1 -%}{%- endif -%}
-        {%- if pick.status == 'lost' -%}{%- assign lost_count = lost_count | plus: 1 -%}{%- endif -%}
+  {%- if pick.status == 'won' or pick.status == 'ai_won' -%}{%- assign won_count = won_count | plus: 1 -%}{%- endif -%}
+  {%- if pick.status == 'lost' or pick.status == 'ai_lost' -%}{%- assign lost_count = lost_count | plus: 1 -%}{%- endif -%}
       {%- endif -%}
     {%- endfor -%}
     {%- assign week_status = 'pending' -%}
@@ -71,6 +71,7 @@ layout: default
               <div class="pick-main">{{ pick.pick | default: '—' }}</div>
               <div class="meta">
                 {% if pick.odds %}<span class="odds">{{ pick.odds }}</span>{% endif %}
+                {% if pick.status == 'ai_won' or pick.status == 'ai_lost' %}<span class="ai-flag" title="AI Evaluated" aria-label="AI evaluated pick">🤖</span>{% endif %}
                 {% if pick.worst %}<span class="worst-flag" title="Worst Pick">💩</span>{% endif %}
               </div>
             </td>
@@ -91,8 +92,8 @@ layout: default
     {% for w in weeks %}
       {% assign pick = w.picks[p.id] %}
       {% if pick %}
-        {% if pick.status == 'won' %}{% assign wins = wins | plus: 1 %}{% endif %}
-        {% if pick.status == 'lost' %}{% assign losses = losses | plus: 1 %}{% endif %}
+  {% if pick.status == 'won' or pick.status == 'ai_won' %}{% assign wins = wins | plus: 1 %}{% endif %}
+  {% if pick.status == 'lost' or pick.status == 'ai_lost' %}{% assign losses = losses | plus: 1 %}{% endif %}
         {% if pick.worst %}{% assign worsts = worsts | plus: 1 %}{% endif %}
       {% endif %}
     {% endfor %}
@@ -141,11 +142,11 @@ layout: default
     {% assign player_longest_loss = 0 %}
     {% for w in sorted_weeks %}
       {% assign pick = w.picks[p.id] %}
-      {% if pick and pick.status == 'won' %}
+  {% if pick and (pick.status == 'won' or pick.status == 'ai_won') %}
         {% assign player_current_win = player_current_win | plus: 1 %}
         {% if player_current_win > player_longest_win %}{% assign player_longest_win = player_current_win %}{% endif %}
         {% assign player_current_loss = 0 %}
-      {% elsif pick and pick.status == 'lost' %}
+  {% elsif pick and (pick.status == 'lost' or pick.status == 'ai_lost') %}
         {% assign player_current_loss = player_current_loss | plus: 1 %}
         {% if player_current_loss > player_longest_loss %}{% assign player_longest_loss = player_current_loss %}{% endif %}
         {% assign player_current_win = 0 %}
