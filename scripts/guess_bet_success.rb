@@ -68,7 +68,15 @@ prompt = ''
 api_key = ENV['OPENAI_KEY'] || ENV['OPENAI_API_KEY']
 
 allowed_days = %w[Thursday Sunday Monday]
-if !allowed_days.include?(Date.today.strftime('%A'))
+allowed_days.include?(
+  (begin
+     require 'tzinfo'
+     TZInfo::Timezone.get('America/Chicago').now.strftime('%A')
+   rescue LoadError
+     ENV['TZ'] = 'America/Chicago'
+     Time.now.strftime('%A')
+   end)
+)
   puts "| Today is #{Date.today.strftime('%A')} - skipping bet evaluation."
 elsif Date.today.strftime('%A') == 'Thursday' && Time.now.hour < 19
   puts "| Today is #{Date.today.strftime('%A')} before 7 PM - skipping bet evaluation."
