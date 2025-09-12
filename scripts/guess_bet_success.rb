@@ -67,16 +67,17 @@ boxscore_url = "https://www.espn.com/nfl/scoreboard/_/week/#{@current_week_num}/
 prompt = ''
 api_key = ENV['OPENAI_KEY'] || ENV['OPENAI_API_KEY']
 
+(begin
+  require 'tzinfo'
+  TZInfo::Timezone.get('America/Chicago').now.strftime('%A')
+rescue LoadError
+  ENV['TZ'] = 'America/Chicago'
+  Time.now.strftime('%A')
+end)
+
+
 allowed_days = %w[Thursday Sunday Monday]
-allowed_days.include?(
-  (begin
-     require 'tzinfo'
-     TZInfo::Timezone.get('America/Chicago').now.strftime('%A')
-   rescue LoadError
-     ENV['TZ'] = 'America/Chicago'
-     Time.now.strftime('%A')
-   end)
-)
+if !allowed_days.include?(Date.today.strftime('%A'))
   puts "| Today is #{Date.today.strftime('%A')} - skipping bet evaluation."
 elsif Date.today.strftime('%A') == 'Thursday' && Time.now.hour < 19
   puts "| Today is #{Date.today.strftime('%A')} before 7 PM - skipping bet evaluation."
