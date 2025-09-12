@@ -10,17 +10,17 @@ weeks:
       worst: false
       odds: ''
     adam:
-      pick: _
+      pick: Dallas Cowboys -5.5
       status: pending
       worst: false
       odds: ''
     sam:
-      pick: Jordan Love under 229 passing yards
+      pick: Jordan Love under 238.5 passing yards
       status: pending
       worst: false
       odds: ''
     jeff:
-      pick: _
+      pick: Arizona Cardinals ML
       status: pending
       worst: false
       odds: ''
@@ -40,12 +40,12 @@ weeks:
       worst: false
       odds: "-278"
     jma:
-      pick: _
+      pick: CeeDee Lamb Anytime TD
       status: pending
       worst: false
       odds: ''
     mike:
-      pick: _
+      pick: Austin Ekeler over 23.5 rec yards
       status: pending
       worst: false
       odds: ''
