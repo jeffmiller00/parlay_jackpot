@@ -1,109 +1,109 @@
 ---
-version: 1757618495
+version: 1757885557
 weeks:
-  - week: 2
-    total_potential: 1954.12
-    picks:
-      andy:
-        pick: Broncos -2.5
-        status: pending
-        worst: false
-        odds: ""
-      adam:
-        pick: Dallas Cowboys -5.5
-        status: pending
-        worst: false
-        odds: ""
-      sam:
-        pick: Jordan Love under 238.5 passing yards
-        status: lost
-        worst: false
-        odds: ""
-      jeff:
-        pick: Arizona Cardinals ML
-        status: pending
-        worst: false
-        odds: ""
-      mr_gaddi:
-        pick: Josh Allen Anytime TD
-        status: pending
-        worst: false
-        odds: "-130"
-      brad:
-        pick: Bengals Win
-        status: pending
-        worst: false
-        odds: "-180"
-      joe:
-        pick: AJ Brown OVER 3.5 receptions
-        status: pending
-        worst: false
-        odds: "-278"
-      jma:
-        pick: CeeDee Lamb Anytime TD
-        status: pending
-        worst: false
-        odds: "+100"
-      mike:
-        pick: Austin Ekeler over 23.5 rec yards
-        status: lost
-        worst: false
-        odds: ""
-      daniel:
-        pick: Deebo Samuel over 4.5 catches
-        status: pending
-        worst: false
-        odds: ""
-  - week: 1
-    total_potential: 1798.42
-    picks:
-      andy:
-        pick: Puka to have more than 5.5 receptions
-        status: won
-        worst: false
-        odds: "-158"
-      adam:
-        pick: Joe Flacco Over 235.5 pass yards
-        status: won
-        worst: false
-        odds: "-114"
-      sam:
-        pick: Barkley Anytime TD
-        status: won
-        worst: false
-        odds: "-195"
-      jeff:
-        pick: Wisconsin/Middle TN Under 45.5
-        status: lost
-        worst: true
-        odds: "-115"
-      mr_gaddi:
-        pick: Christian McCaffery anytime TD
-        status: lost
-        worst: false
-        odds: "-145"
-      brad:
-        pick: Bears first drive punt
-        status: lost
-        worst: false
-        odds: ""
-      joe:
-        pick: Trey McBride 40+ Receiving Yards
-        status: won
-        worst: false
-        odds: ""
-      jma:
-        pick: Bears/Vikings 1st qtr over +7.5
-        status: lost
-        worst: false
-        odds: "+102"
-      mike:
-        pick: TreVon Henderson over 2.5 rec
-        status: won
-        worst: false
-        odds: ""
-      daniel:
-        pick: Cooper Kupp over 38.5
-        status: lost
-        worst: false
-        odds: "-114"
+- week: 2
+  total_potential: 1954.12
+  picks:
+    andy:
+      pick: Broncos -2.5
+      status: pending
+      worst: false
+      odds: ''
+    adam:
+      pick: Dallas Cowboys -5.5
+      status: lost
+      worst: false
+      odds: ''
+    sam:
+      pick: Jordan Love under 238.5 passing yards
+      status: lost
+      worst: false
+      odds: ''
+    jeff:
+      pick: Arizona Cardinals ML
+      status: pending
+      worst: false
+      odds: ''
+    mr_gaddi:
+      pick: Josh Allen Anytime TD
+      status: lost
+      worst: false
+      odds: "-130"
+    brad:
+      pick: Bengals Win
+      status: won
+      worst: false
+      odds: "-180"
+    joe:
+      pick: AJ Brown OVER 3.5 receptions
+      status: won
+      worst: false
+      odds: "-278"
+    jma:
+      pick: CeeDee Lamb Anytime TD
+      status: lost
+      worst: false
+      odds: "+100"
+    mike:
+      pick: Austin Ekeler over 23.5 rec yards
+      status: lost
+      worst: false
+      odds: ''
+    daniel:
+      pick: Deebo Samuel over 4.5 catches
+      status: won
+      worst: false
+      odds: ''
+- week: 1
+  total_potential: 1798.42
+  picks:
+    andy:
+      pick: Puka to have more than 5.5 receptions
+      status: won
+      worst: false
+      odds: "-158"
+    adam:
+      pick: Joe Flacco Over 235.5 pass yards
+      status: won
+      worst: false
+      odds: "-114"
+    sam:
+      pick: Barkley Anytime TD
+      status: won
+      worst: false
+      odds: "-195"
+    jeff:
+      pick: Wisconsin/Middle TN Under 45.5
+      status: lost
+      worst: true
+      odds: "-115"
+    mr_gaddi:
+      pick: Christian McCaffery anytime TD
+      status: lost
+      worst: false
+      odds: "-145"
+    brad:
+      pick: Bears first drive punt
+      status: lost
+      worst: false
+      odds: ''
+    joe:
+      pick: Trey McBride 40+ Receiving Yards
+      status: won
+      worst: false
+      odds: ''
+    jma:
+      pick: Bears/Vikings 1st qtr over +7.5
+      status: lost
+      worst: false
+      odds: "+102"
+    mike:
+      pick: TreVon Henderson over 2.5 rec
+      status: won
+      worst: false
+      odds: ''
+    daniel:
+      pick: Cooper Kupp over 38.5
+      status: lost
+      worst: false
+      odds: "-114"
