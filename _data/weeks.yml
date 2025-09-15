@@ -6,7 +6,7 @@ weeks:
   picks:
     andy:
       pick: Broncos -2.5
-      status: pending
+      status: lost
       worst: false
       odds: ''
     adam:
@@ -21,7 +21,7 @@ weeks:
       odds: ''
     jeff:
       pick: Arizona Cardinals ML
-      status: pending
+      status: won
       worst: false
       odds: ''
     mr_gaddi:
