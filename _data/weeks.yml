@@ -5,7 +5,7 @@ weeks:
     total_potential: 0
     picks:
       andy:
-        pick: _
+        pick: Lions  +5.5
         status: pending
         worst: false
         odds: ""
@@ -15,7 +15,7 @@ weeks:
         worst: false
         odds: ""
       sam:
-        pick: Tampa Bay to win
+        pick: Jordan Mason over 2.5 receptions
         status: pending
         worst: false
         odds: "-325"
@@ -30,10 +30,10 @@ weeks:
         worst: false
         odds: "-300"
       brad:
-        pick: Wisconsin to win ❤️
-          status: pending
-          worst: false
-          odds: ""
+        pick: Wisconsin to win
+        status: pending
+        worst: false
+        odds: ""
       joe:
         pick: George Pickens over 3.5 receptions
         status: pending
@@ -50,7 +50,7 @@ weeks:
         worst: false
         odds: ""
       daniel:
-        pick: _
+        pick: Tampa Bay to win
         status: pending
         worst: false
         odds: ""
