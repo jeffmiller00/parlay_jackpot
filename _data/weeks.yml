@@ -2,26 +2,26 @@
 version: 1758033043
 weeks:
   - week: 3
-    total_potential: 0
+    total_potential: 1114.39
     picks:
       andy:
-        pick: Lions  +5.5
+        pick: Detroit Lions  +5.5
         status: pending
         worst: false
         odds: ""
       adam:
-        pick: _
-        status: pending
+        pick: Pittsburgh Steelers -1.5
+        status: won
         worst: false
         odds: ""
       sam:
         pick: Jordan Mason over 2.5 receptions
-        status: pending
+        status: ai_lost
         worst: false
         odds: "-325"
       jeff:
         pick: Seattle Seahawks to win
-        status: pending
+        status: ai_won
         worst: false
         odds: "-385"
       mr_gaddi:
@@ -30,28 +30,28 @@ weeks:
         worst: false
         odds: "-300"
       brad:
-        pick: Wisconsin to win
-        status: pending
+        pick: Indianapolis Colts to win
+        status: won
         worst: false
-        odds: ""
+        odds: "-320"
       joe:
         pick: George Pickens over 3.5 receptions
-        status: pending
+        status: ai_won
         worst: false
         odds: "-138"
       jma:
         pick: Daniel Jones over 200 yards passing
-        status: pending
+        status: won
         worst: false
         odds: ""
       mike:
-        pick: _
-        status: pending
+        pick: Justin Jefferson Over 70.5 receiving yards
+        status: won
         worst: false
         odds: ""
       daniel:
         pick: Tampa Bay to win
-        status: pending
+        status: won
         worst: false
         odds: ""
   - week: 2
