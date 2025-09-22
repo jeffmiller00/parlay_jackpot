@@ -16,17 +16,17 @@ weeks:
         odds: ""
       sam:
         pick: Jordan Mason over 2.5 receptions
-        status: ai_lost
+        status: lost
         worst: false
         odds: "-325"
       jeff:
         pick: Seattle Seahawks to win
-        status: ai_won
+        status: won
         worst: false
         odds: "-385"
       mr_gaddi:
         pick: KC Chiefs to win
-        status: pending
+        status: won
         worst: false
         odds: "-300"
       brad:
@@ -36,7 +36,7 @@ weeks:
         odds: "-320"
       joe:
         pick: George Pickens over 3.5 receptions
-        status: ai_won
+        status: won
         worst: false
         odds: "-138"
       jma:
