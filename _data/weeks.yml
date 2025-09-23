@@ -1,12 +1,25 @@
 ---
 version: 1758033043
 weeks:
+  - week: 4
+    total_potential: 0
+    picks:
+      andy: { pick: _, status: pending, worst: false, odds: "" }
+      adam: { pick: _, status: pending, worst: false, odds: "" }
+      sam: { pick: _, status: pending, worst: false, odds: "" }
+      jeff: { pick: _, status: pending, worst: false, odds: "" }
+      mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
+      brad: { pick: _, status: pending, worst: false, odds: "" }
+      joe: { pick: _, status: pending, worst: false, odds: "" }
+      jma: { pick: _, status: pending, worst: false, odds: "" }
+      mike: { pick: _, status: pending, worst: false, odds: "" }
+      daniel: { pick: _, status: pending, worst: false, odds: "" }
   - week: 3
     total_potential: 1114.39
     picks:
       andy:
         pick: Detroit Lions  +5.5
-        status: pending
+        status: won
         worst: false
         odds: ""
       adam:
@@ -17,7 +30,7 @@ weeks:
       sam:
         pick: Jordan Mason over 2.5 receptions
         status: lost
-        worst: false
+        worst: true
         odds: "-325"
       jeff:
         pick: Seattle Seahawks to win
