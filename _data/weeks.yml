@@ -4,16 +4,56 @@ weeks:
   - week: 4
     total_potential: 0
     picks:
-      andy: { pick: _, status: pending, worst: false, odds: "" }
-      adam: { pick: _, status: pending, worst: false, odds: "" }
-      sam: { pick: _, status: pending, worst: false, odds: "" }
-      jeff: { pick: _, status: pending, worst: false, odds: "" }
-      mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-      brad: { pick: _, status: pending, worst: false, odds: "" }
-      joe: { pick: _, status: pending, worst: false, odds: "" }
-      jma: { pick: _, status: pending, worst: false, odds: "" }
-      mike: { pick: _, status: pending, worst: false, odds: "" }
-      daniel: { pick: _, status: pending, worst: false, odds: "" }
+      andy:
+        pick: James Cook over 74.5 rushing yards
+        status: won
+        worst: false
+        odds: "-110"
+      adam:
+        pick: Baltimore Ravens -2.5
+        status: pending
+        worst: false
+        odds: "-110"
+      sam:
+        pick: New England Patriots to win
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Los Angeles Rams -3.5
+        status: pending
+        worst: false
+        odds: "-110"
+      mr_gaddi:
+        pick: Derrick Henry Anytime TD
+        status: pending
+        worst: false
+        odds: ""
+      brad:
+        pick: San Francisco 49ers to win
+        status: pending
+        worst: false
+        odds: ""
+      joe:
+        pick: Tucker Kraft OVER 3.5 receptions
+        status: pending
+        worst: false
+        odds: "-114"
+      jma:
+        pick: Saquon Barkley 70+ yds rushing
+        status: lost
+        worst: false
+        odds: ""
+      mike:
+        pick: Los Angeles Chargers to win
+        status: lost
+        worst: false
+        odds: ""
+      daniel:
+        pick: Bears vs Raiders over 47.5
+        status: pending
+        worst: false
+        odds: "-110"
   - week: 3
     total_potential: 1114.39
     picks:
