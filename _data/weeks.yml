@@ -2,7 +2,7 @@
 version: 1758033043
 weeks:
   - week: 4
-    total_potential: 0
+    total_potential: 960
     picks:
       andy:
         pick: James Cook over 74.5 rushing yards
@@ -11,7 +11,7 @@ weeks:
         odds: "-110"
       adam:
         pick: Baltimore Ravens -2.5
-        status: pending
+        status: lost
         worst: false
         odds: "-110"
       sam:
@@ -21,22 +21,22 @@ weeks:
         odds: ""
       jeff:
         pick: Los Angeles Rams -3.5
-        status: pending
+        status: won
         worst: false
         odds: "-110"
       mr_gaddi:
         pick: Derrick Henry Anytime TD
-        status: pending
+        status: lost
         worst: false
         odds: ""
       brad:
         pick: San Francisco 49ers to win
-        status: pending
+        status: lost
         worst: false
         odds: ""
       joe:
         pick: Tucker Kraft OVER 3.5 receptions
-        status: pending
+        status: won
         worst: false
         odds: "-114"
       jma:
@@ -51,7 +51,7 @@ weeks:
         odds: ""
       daniel:
         pick: Bears vs Raiders over 47.5
-        status: pending
+        status: won
         worst: false
         odds: "-110"
   - week: 3
