@@ -1,6 +1,19 @@
 ---
 version: 1758033043
 weeks:
+  - week: 5
+    total_potential: 0
+    picks:
+      andy: { pick: _, status: pending, worst: false, odds: "" }
+      adam: { pick: _, status: pending, worst: false, odds: "" }
+      sam: { pick: _, status: pending, worst: false, odds: "" }
+      jeff: { pick: _, status: pending, worst: false, odds: "" }
+      mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
+      brad: { pick: _, status: pending, worst: false, odds: "" }
+      joe: { pick: _, status: pending, worst: false, odds: "" }
+      jma: { pick: _, status: pending, worst: false, odds: "" }
+      mike: { pick: _, status: pending, worst: false, odds: "" }
+      daniel: { pick: _, status: pending, worst: false, odds: "" }
   - week: 4
     total_potential: 960
     picks:
