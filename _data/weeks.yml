@@ -2,18 +2,58 @@
 version: 1758033043
 weeks:
   - week: 5
-    total_potential: 0
+    total_potential: 2207.39
     picks:
-      andy: { pick: _, status: pending, worst: false, odds: "" }
-      adam: { pick: _, status: pending, worst: false, odds: "" }
-      sam: { pick: _, status: pending, worst: false, odds: "" }
-      jeff: { pick: _, status: pending, worst: false, odds: "" }
-      mr_gaddi: { pick: _, status: pending, worst: false, odds: "" }
-      brad: { pick: _, status: pending, worst: false, odds: "" }
-      joe: { pick: _, status: pending, worst: false, odds: "" }
-      jma: { pick: _, status: pending, worst: false, odds: "" }
-      mike: { pick: _, status: pending, worst: false, odds: "" }
-      daniel: { pick: _, status: pending, worst: false, odds: "" }
+      andy:
+        pick: Justin Fields anytime TD
+        status: lost
+        worst: false
+        odds: ""
+      adam:
+        pick: Jared Goff Over 225 yds
+        status: won
+        worst: false
+        odds: ""
+      sam:
+        pick: Jonathan Taylor anytime TD
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Seattle Seahawks -3
+        status: lost
+        worst: false
+        odds: "-110"
+      mr_gaddi:
+        pick: Indianapolis Colts -6.5
+        status: won
+        worst: false
+        odds: "-110"
+      brad:
+        pick: Dallas Cowboys -1.5
+        status: won
+        worst: false
+        odds: "-110"
+      joe:
+        pick: Chase Brown over 15.5 receiving yards
+        status: won
+        worst: false
+        odds: "-114"
+      jma:
+        pick: Baltimore Ravens +1.5
+        status: lost
+        worst: false
+        odds: "-110"
+      mike:
+        pick: Darren Waller O 29.5 Rec yards
+        status: won
+        worst: false
+        odds: ""
+      daniel:
+        pick: Gunnar Helm over 3 receptions
+        status: won
+        worst: false
+        odds: ""
   - week: 4
     total_potential: 960
     picks:
