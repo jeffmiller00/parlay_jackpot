@@ -1,6 +1,59 @@
 ---
 version: 1758033043
 weeks:
+  - week: 6
+    total_potential: 0
+    picks:
+      andy:
+        pick: __
+        status: pending
+        worst: false
+        odds: ""
+      adam:
+        pick: __
+        status: pending
+        worst: false
+        odds: ""
+      sam:
+        pick: __
+        status: pending
+        worst: false
+        odds: ""
+      jeff:
+        pick: __
+        status: pending
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: __
+        status: pending
+        worst: false
+        odds: ""
+      brad:
+        pick: __
+        status: pending
+        worst: false
+        odds: ""
+      joe:
+        pick: __
+        status: pending
+        worst: false
+        odds: ""
+      jma:
+        pick: __
+        status: pending
+        worst: false
+        odds: ""
+      mike:
+        pick: __
+        status: pending
+        worst: false
+        odds: ""
+      daniel:
+        pick: __
+        status: pending
+        worst: false
+        odds: ""
   - week: 5
     total_potential: 2207.39
     picks:
