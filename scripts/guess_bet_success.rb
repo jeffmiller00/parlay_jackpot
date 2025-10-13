@@ -50,7 +50,7 @@ end
 @current_week_num = @weeks.map { |w| w['week'] }.max || 1
 
 def ai_guess?
-  !!(ENV['JEKYLL_ENV'] == 'production' || true)
+  !!(ENV['JEKYLL_ENV'] == 'production' || false)
 end
 
 # Find week hash by number
@@ -77,12 +77,12 @@ end)
 
 
 allowed_days = %w[Thursday Sunday Monday]
-if !allowed_days.include?(Date.today.strftime('%A'))
+if !ai_guess?
+  puts '| I do not feel like guessing right now.'
+elsif !allowed_days.include?(Date.today.strftime('%A'))
   puts "| Today is #{Date.today.strftime('%A')} - skipping bet evaluation."
 elsif Date.today.strftime('%A') == 'Thursday' && Time.now.hour < 19
   puts "| Today is #{Date.today.strftime('%A')} before 7 PM - skipping bet evaluation."
-elsif !ai_guess?
-  puts '| I do not feel like guessing right now.'
 else
   current_week.dig('picks').each do |name, pick_info|
     if pick_info['pick'] == '_'

@@ -2,58 +2,58 @@
 version: 1758033043
 weeks:
   - week: 6
-    total_potential: 0
+    total_potential: 1200
     picks:
       andy:
-        pick: __
-        status: pending
+        pick: Dallas Cowboys -3
+        status: lost
         worst: false
-        odds: ""
+        odds: "-115"
       adam:
-        pick: __
-        status: pending
+        pick: Aaron Rodgers Under 210.5 Passing Yards
+        status: lost
         worst: false
-        odds: ""
+        odds: "-114"
       sam:
-        pick: __
-        status: pending
+        pick: Drake Mae over 1.5 touchdowns
+        status: won
         worst: false
         odds: ""
       jeff:
-        pick: __
-        status: pending
+        pick: Cleveland Browns +6.5
+        status: lost
         worst: false
-        odds: ""
+        odds: "-110"
       mr_gaddi:
-        pick: __
-        status: pending
+        pick: NE Patriots to win
+        status: won
         worst: false
         odds: ""
       brad:
-        pick: __
-        status: pending
+        pick: Indianapolis Colts -5.5
+        status: lost
         worst: false
-        odds: ""
+        odds: "-110"
       joe:
-        pick: __
-        status: pending
+        pick: Davante Adams OVER 4.5 receptions
+        status: lost
         worst: false
-        odds: ""
+        odds: "-114"
       jma:
-        pick: __
-        status: pending
+        pick: Puka Nakua Anytime TD
+        status: lost
         worst: false
         odds: ""
       mike:
-        pick: __
-        status: pending
+        pick: Brian Thomas Jr OVER 4.5 receptions
+        status: won
         worst: false
         odds: ""
       daniel:
-        pick: __
-        status: pending
+        pick: Lions / Chiefs over 52.5 points
+        status: lost
         worst: false
-        odds: ""
+        odds: "-110"
   - week: 5
     total_potential: 2207.39
     picks:
