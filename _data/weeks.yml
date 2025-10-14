@@ -47,7 +47,7 @@ weeks:
       mike:
         pick: Brian Thomas Jr OVER 4.5 receptions
         status: won
-        worst: false
+        worst: true
         odds: ""
       daniel:
         pick: Lions / Chiefs over 52.5 points
