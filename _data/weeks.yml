@@ -1,6 +1,59 @@
 ---
 version: 1758033043
 weeks:
+  - week: 7
+    total_potential: 2122.36
+    picks:
+      andy:
+        pick: Kamara +50 yards
+        status: pending
+        worst: false
+        odds: ""
+      adam:
+        pick: Cleveland Browns -2.5
+        status: pending
+        worst: false
+        odds: "-110"
+      sam:
+        pick: Seattle Seahawks ML
+        status: pending
+        worst: false
+        odds: ""
+      jeff:
+        pick: Atlanta Falcons ML
+        status: pending
+        worst: false
+        odds: "+115"
+      mr_gaddi:
+        pick: Rome Odunze Anytime TD
+        status: pending
+        worst: false
+        odds: ""
+      brad:
+        pick: Philadelphia Eagles ML
+        status: pending
+        worst: false
+        odds: ""
+      joe:
+        pick: Tet McMillan over 52.5 receiving yards
+        status: pending
+        worst: false
+        odds: ""
+      jma:
+        pick: Justin Fields +150yds passing 
+        status: pending
+        worst: false
+        odds: ""
+      mike:
+        pick: Jayden Daniels over 232.5 passing yards
+        status: pending
+        worst: false
+        odds: ""
+      daniel:
+        pick: Loveland 3+ receptions
+        status: pending
+        worst: false
+        odds: ""
   - week: 6
     total_potential: 1200
     picks:
