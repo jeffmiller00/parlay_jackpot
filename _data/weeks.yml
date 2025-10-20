@@ -6,12 +6,12 @@ weeks:
     picks:
       andy:
         pick: Kamara +50 yards
-        status: pending
+        status: lost
         worst: false
         odds: ""
       adam:
         pick: Cleveland Browns -2.5
-        status: pending
+        status: won
         worst: false
         odds: "-110"
       sam:
@@ -21,37 +21,37 @@ weeks:
         odds: ""
       jeff:
         pick: Atlanta Falcons ML
-        status: pending
+        status: lost
         worst: false
         odds: "+115"
       mr_gaddi:
         pick: Rome Odunze Anytime TD
-        status: pending
+        status: lost
         worst: false
         odds: ""
       brad:
         pick: Philadelphia Eagles ML
-        status: pending
+        status: won
         worst: false
         odds: ""
       joe:
         pick: Tet McMillan over 52.5 receiving yards
-        status: pending
+        status: lost
         worst: false
         odds: ""
       jma:
-        pick: Justin Fields +150yds passing 
-        status: pending
+        pick: Justin Fields +150yds passing
+        status: lost
         worst: false
         odds: ""
       mike:
         pick: Jayden Daniels over 232.5 passing yards
-        status: pending
+        status: lost
         worst: false
         odds: ""
       daniel:
-        pick: Loveland 3+ receptions
-        status: pending
+        pick: Colston Loveland 3+ receptions
+        status: won
         worst: false
         odds: ""
   - week: 6
