@@ -55,7 +55,7 @@ weeks:
         worst: false
         odds: ""
   - week: 7
-    total_potential: 2122.36
+    total_potential: 2122
     picks:
       andy:
         pick: Kamara +50 yards
@@ -161,7 +161,7 @@ weeks:
         worst: false
         odds: "-110"
   - week: 5
-    total_potential: 2207.39
+    total_potential: 2207
     picks:
       andy:
         pick: Justin Fields anytime TD
@@ -267,7 +267,7 @@ weeks:
         worst: false
         odds: "-110"
   - week: 3
-    total_potential: 1114.39
+    total_potential: 1114
     picks:
       andy:
         pick: Detroit Lions  +5.5
@@ -320,7 +320,7 @@ weeks:
         worst: false
         odds: ""
   - week: 2
-    total_potential: 1954.12
+    total_potential: 1954
     picks:
       andy:
         pick: Broncos -2.5
@@ -373,7 +373,7 @@ weeks:
         worst: false
         odds: ""
   - week: 1
-    total_potential: 1798.42
+    total_potential: 1798
     picks:
       andy:
         pick: Puka to have more than 5.5 receptions
