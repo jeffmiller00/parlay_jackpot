@@ -1,6 +1,59 @@
 ---
 version: 1758033043
 weeks:
+  - week: 8
+    total_potential: 358
+    picks:
+      andy:
+        pick: San Francisco 49ers +2.5
+        status: lost
+        worst: false
+        odds: "-110"
+      adam:
+        pick: Tampa Bay Buccaneers -4.5
+        status: won
+        worst: false
+        odds: "-102"
+      sam:
+        pick: Philadelphia Eagles ML
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Buffalo Bills ML
+        status: won
+        worst: false
+        odds: "+115"
+      mr_gaddi:
+        pick: Ja'Marr Chase OVER 85.5 rec yards
+        status: won
+        worst: false
+        odds: "-114"
+      brad:
+        pick: Green Bay Packers ML
+        status: won
+        worst: false
+        odds: ""
+      joe:
+        pick: Swift over 13.5 rushing attempts
+        status: lost
+        worst: false
+        odds: ""
+      jma:
+        pick: James Cook +60 yds rushing
+        status: won
+        worst: false
+        odds: "-125"
+      mike:
+        pick: Bo Nix over 233 passing yards
+        status: won
+        worst: false
+        odds: "-115"
+      daniel:
+        pick: Swift o73.5 combined rush/receiving
+        status: lost
+        worst: false
+        odds: ""
   - week: 7
     total_potential: 2122.36
     picks:
