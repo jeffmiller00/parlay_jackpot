@@ -1,5 +1,5 @@
 ---
-version: 1762185044
+version: 1762185543
 weeks:
 - week: 9
   total_potential: 0
@@ -36,6 +36,7 @@ weeks:
       pick: Broncos/Texans o40.5 points
       status: lost
       worst: true
+      worst_status: ai
       odds: "-110"
     joe:
       pick: Christian McCaffery rushing and receiving over 131.5
