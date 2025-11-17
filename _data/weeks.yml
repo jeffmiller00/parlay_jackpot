@@ -1,6 +1,61 @@
 ---
 version: 1762185543
 weeks:
+  - week: 11
+    total_potential: 1265
+    worst_rationale: The Falcons money-line is the worst bet because Atlanta has been inconsistent and often struggles to win outright, while the Odunze and Robinson yardage props align more closely with their typical performance averages and rely on individual output rather than full team success.
+    picks:
+      andy:
+        pick: Rome Odunze +50 receiving yards
+        status: lost
+        worst: false
+        odds: ""
+      adam:
+        pick: TB/Buf O46.5
+        status: won
+        worst: false
+        odds: ""
+      sam:
+        pick: Winston OVER 0.5 interceptions thrown
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Atlanta Falcons ML
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      mr_gaddi:
+        pick: San Francisco 49ers ML
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Chicago Bears ML
+        status: won
+        worst: false
+        odds: ""
+      joe:
+        pick: Swift over 54.5 yards
+        status: won
+        worst: false
+        odds: ""
+      jma:
+        pick: --
+        status: pending
+        worst: false
+        odds: ""
+      mike:
+        pick: --
+        status: pending
+        worst: false
+        odds: ""
+      daniel:
+        pick: Ladd McConkey over something (forced by Brad)
+        status: lost
+        worst: false
+        odds: ""
   - week: 10
     total_potential: 1033
     worst_rationale: If I must pick one as the worst bet this week, I'd pick the combined QB yards (Jackson + McCarthy over 425). The requirement for both to hit high yardage makes it a tougher proposition compared to the others.
@@ -34,7 +89,7 @@ weeks:
         pick: Buffalo Bills alt spread -6.5
         status: lost
         worst: false
-        odds: "-165 odds"
+        odds: "-165"
       joe:
         pick: JJ McCarthy over 18.5
         status: won
@@ -50,7 +105,7 @@ weeks:
         pick: Bam Knight 10+ rec yards
         status: lost
         worst: false
-        odds: "-115"
+        odds: ""
       daniel:
         pick: Greg Dulcich o2.5 receptions
         status: lost
