@@ -1,6 +1,61 @@
 ---
 version: 1762185543
 weeks:
+  - week: 12
+    total_potential: 0
+    worst_rationale: A total of 47.5 points in that matchup is ambitious given both teams’ defensive capabilities and recent trend toward lower scoring, making it the least likely of the three bets to hit.
+    picks:
+      andy:
+        pick: Courtland Loveland 3+ receptions
+        status: won
+        worst: false
+        odds: ""
+      adam:
+        pick: PHI/DAL O47.5
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      sam:
+        pick: NE Patriots ML
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Detroit Lions ML
+        status: won
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: San Francisco 49ers ML
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Chicago Bears ML
+        status: won
+        worst: false
+        odds: ""
+      joe:
+        pick: JJ McCarthy over 0.5 INT
+        status: won
+        worst: false
+        odds: ""
+      jma:
+        pick: Cam Ward over 0.5 INT
+        status: lost
+        worst: false
+        odds: ""
+      mike:
+        pick: Stefon Diggs over rec yards
+        status: lost
+        worst: false
+        odds: ""
+      daniel:
+        pick: Caleb Williams o22.5 rushing
+        status: lost
+        worst: false
+        odds: ""
   - week: 11
     total_potential: 1265
     worst_rationale: The Falcons money-line is the worst bet because Atlanta has been inconsistent and often struggles to win outright, while the Odunze and Robinson yardage props align more closely with their typical performance averages and rely on individual output rather than full team success.
