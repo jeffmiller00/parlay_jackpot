@@ -1,6 +1,61 @@
 ---
 version: 1762185543
 weeks:
+  - week: 13
+    total_potential: 1704
+    worst_rationale: Because the Colts lost their Week 13 game outright (20-16 to the Houston Texans), the spread bet failed — whereas the player-props (for example Jaxon Smith-Njigba anytime TD or Kyren Williams over 1.5 receptions) at least had a chance to hit even if the team lost.
+    picks:
+      andy:
+        pick: Buffalo Bills -3
+        status: won
+        worst: false
+        odds: ""
+      adam:
+        pick: Indianapolis Colts -3
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      sam:
+        pick: Seattle Seahawks ML
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Los Angeles Rams ML
+        status: lost
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: De'von Achane OVER 78.5 rushing yards
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Jaxon Smith-Njigba anytime TD
+        status: lost
+        worst: false
+        odds: ""
+      joe:
+        pick: Kyren Williams over 1.5 receptions
+        status: lost
+        worst: false
+        odds: ""
+      jma:
+        pick: Jalen Hurts under 240 passing yards
+        status: won
+        worst: false
+        odds: ""
+      mike:
+        pick: Jaxon Smith-Njigba over receptions
+        status: lost
+        worst: false
+        odds: ""
+      daniel:
+        pick: Justin Jefferson anytime TD
+        status: lost
+        worst: false
+        odds: ""
   - week: 12
     total_potential: 0
     worst_rationale: A total of 47.5 points in that matchup is ambitious given both teams’ defensive capabilities and recent trend toward lower scoring, making it the least likely of the three bets to hit.
