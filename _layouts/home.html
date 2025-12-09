@@ -19,7 +19,9 @@ are performed once and stored in captured strings for cleaner markup below.
 {%- comment -%} Pre-compute max potential {%- endcomment -%}
 {% assign max_potential = 0 %}
 {% for w in weeks %}
-{% if w.total_potential and w.total_potential > max_potential %}
+{% if w.total_potential == "∞" %}
+{% assign max_potential = "∞" %}
+{% elsif max_potential != "∞" and w.total_potential and w.total_potential > max_potential %}
 {% assign max_potential = w.total_potential %}
 {% endif %}
 {% endfor %}
@@ -48,7 +50,7 @@ are performed once and stored in captured strings for cleaner markup below.
 {%- assign week_status = 'won' -%}
 {%- endif -%}
 {%- assign highlight = '' -%}
-{%- if w.total_potential == max_potential and max_potential > 0 -%}{%- assign highlight = 'is-max' -%}{%- endif -%}
+{%- if w.total_potential == max_potential and max_potential != 0 -%}{%- assign highlight = 'is-max' -%}{%- endif -%}
 
 {%- comment -%} Summary chip {%- endcomment -%}
 {% capture chip %}
