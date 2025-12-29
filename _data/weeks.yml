@@ -1,771 +1,997 @@
 ---
 version: 1765304073
 weeks:
-- week: 14
-  total_potential: "∞"
-  worst_rationale: Backing the Colts to win (with a spread) paid nothing because they
-    lost, making that bet far more punishing than a failed player prop or a money-line
-    on a different underdog.
-  picks:
-    andy:
-      pick: Indianapolis Colts -1.5
-      status: lost
-      worst: true
-      worst_status: ai
-      odds: ''
-    adam:
-      pick: None
-      status: pending
-      worst: false
-      odds: ''
-    sam:
-      pick: Chicago Bears +6.5
-      status: lost
-      worst: false
-      odds: ''
-    jeff:
-      pick: Los Angeles Rams ML
-      status: won
-      worst: false
-      odds: ''
-    mr_gaddi:
-      pick: Buffalo Bills ML
-      status: won
-      worst: false
-      odds: ''
-    brad:
-      pick: Cleveland Browns ML
-      status: lost
-      worst: false
-      odds: ''
-    joe:
-      pick: Jonathan Taylor over 17.5 receiving yards
-      status: lost
-      worst: false
-      odds: ''
-    jma:
-      pick: Patrick Mahomes over 230 passing yards
-      status: lost
-      worst: false
-      odds: ''
-    mike:
-      pick: None
-      status: pending
-      worst: false
-      odds: ''
-    daniel:
-      pick: Pat Freiermuth over 2.5 receptions
-      status: lost
-      worst: false
-      odds: ''
-- week: 13
-  total_potential: 1704
-  worst_rationale: Because the Colts lost their Week 13 game outright (20-16 to the
-    Houston Texans), the spread bet failed — whereas the player-props (for example
-    Jaxon Smith-Njigba anytime TD or Kyren Williams over 1.5 receptions) at least
-    had a chance to hit even if the team lost.
-  picks:
-    andy:
-      pick: Buffalo Bills -3
-      status: won
-      worst: false
-      odds: ''
-    adam:
-      pick: Indianapolis Colts -3
-      status: lost
-      worst: true
-      worst_status: ai
-      odds: ''
-    sam:
-      pick: Seattle Seahawks ML
-      status: won
-      worst: false
-      odds: ''
-    jeff:
-      pick: Los Angeles Rams ML
-      status: lost
-      worst: false
-      odds: ''
-    mr_gaddi:
-      pick: De'von Achane OVER 78.5 rushing yards
-      status: won
-      worst: false
-      odds: ''
-    brad:
-      pick: Jaxon Smith-Njigba anytime TD
-      status: lost
-      worst: false
-      odds: ''
-    joe:
-      pick: Kyren Williams over 1.5 receptions
-      status: lost
-      worst: false
-      odds: ''
-    jma:
-      pick: Jalen Hurts under 240 passing yards
-      status: won
-      worst: false
-      odds: ''
-    mike:
-      pick: Jaxon Smith-Njigba over receptions
-      status: lost
-      worst: false
-      odds: ''
-    daniel:
-      pick: Justin Jefferson anytime TD
-      status: lost
-      worst: false
-      odds: ''
-- week: 12
-  total_potential: "∞"
-  worst_rationale: A total of 47.5 points in that matchup is ambitious given both
-    teams’ defensive capabilities and recent trend toward lower scoring, making it
-    the least likely of the three bets to hit.
-  picks:
-    andy:
-      pick: Courtland Loveland 3+ receptions
-      status: won
-      worst: false
-      odds: ''
-    adam:
-      pick: PHI/DAL O47.5
-      status: lost
-      worst: true
-      worst_status: ai
-      odds: ''
-    sam:
-      pick: NE Patriots ML
-      status: won
-      worst: false
-      odds: ''
-    jeff:
-      pick: Detroit Lions ML
-      status: won
-      worst: false
-      odds: ''
-    mr_gaddi:
-      pick: San Francisco 49ers ML
-      status: won
-      worst: false
-      odds: ''
-    brad:
-      pick: Chicago Bears ML
-      status: won
-      worst: false
-      odds: ''
-    joe:
-      pick: JJ McCarthy over 0.5 INT
-      status: won
-      worst: false
-      odds: ''
-    jma:
-      pick: Cam Ward over 0.5 INT
-      status: lost
-      worst: false
-      odds: ''
-    mike:
-      pick: Stefon Diggs over rec yards
-      status: lost
-      worst: false
-      odds: ''
-    daniel:
-      pick: Caleb Williams o22.5 rushing
-      status: lost
-      worst: false
-      odds: ''
-- week: 11
-  total_potential: 1265
-  worst_rationale: The Falcons money-line is the worst bet because Atlanta has been
-    inconsistent and often struggles to win outright, while the Odunze and Robinson
-    yardage props align more closely with their typical performance averages and rely
-    on individual output rather than full team success.
-  picks:
-    andy:
-      pick: Rome Odunze +50 receiving yards
-      status: lost
-      worst: false
-      odds: ''
-    adam:
-      pick: TB/Buf O46.5
-      status: won
-      worst: false
-      odds: ''
-    sam:
-      pick: Winston OVER 0.5 interceptions thrown
-      status: won
-      worst: false
-      odds: ''
-    jeff:
-      pick: Atlanta Falcons ML
-      status: lost
-      worst: true
-      worst_status: ai
-      odds: ''
-    mr_gaddi:
-      pick: San Francisco 49ers ML
-      status: won
-      worst: false
-      odds: ''
-    brad:
-      pick: Chicago Bears ML
-      status: won
-      worst: false
-      odds: ''
-    joe:
-      pick: Swift over 54.5 yards
-      status: won
-      worst: false
-      odds: ''
-    jma:
-      pick: "--"
-      status: pending
-      worst: false
-      odds: ''
-    mike:
-      pick: "--"
-      status: pending
-      worst: false
-      odds: ''
-    daniel:
-      pick: Ladd McConkey over something (forced by Brad)
-      status: lost
-      worst: false
-      odds: ''
-- week: 10
-  total_potential: 1033
-  worst_rationale: If I must pick one as the worst bet this week, I'd pick the combined
-    QB yards (Jackson + McCarthy over 425). The requirement for both to hit high yardage
-    makes it a tougher proposition compared to the others.
-  picks:
-    andy:
-      pick: Colston Loveland +30 yards
-      status: won
-      worst: false
-      odds: ''
-    adam:
-      pick: Bears/Giants O46.5
-      status: lost
-      worst: false
-      odds: ''
-    sam:
-      pick: Chicago Bears ML
-      status: won
-      worst: false
-      odds: ''
-    jeff:
-      pick: Seattle Seahawks ML
-      status: won
-      worst: false
-      odds: ''
-    mr_gaddi:
-      pick: Los Angeles Rams ML
-      status: won
-      worst: false
-      odds: ''
-    brad:
-      pick: Buffalo Bills alt spread -6.5
-      status: lost
-      worst: false
-      odds: "-165"
-    joe:
-      pick: JJ McCarthy over 18.5
-      status: won
-      worst: false
-      odds: ''
-    jma:
-      pick: Lamar Jackson and JJ McCarthy over 425 yds
-      status: lost
-      worst: true
-      worst_status: ai
-      odds: ''
-    mike:
-      pick: Bam Knight 10+ rec yards
-      status: lost
-      worst: false
-      odds: ''
-    daniel:
-      pick: Greg Dulcich o2.5 receptions
-      status: lost
-      worst: false
-      odds: ''
-- week: 9
-  total_potential: "∞"
-  worst_rationale: If I must pick one as the “worst bet” this week, I'd pick the Broncos/Texans
-    over 40.5 points. The odds are weaker for it relative to the others given the
-    potential for a defensive, lower-scoring game.
-  picks:
-    andy:
-      pick: Colston Loveland +30 yards
-      status: won
-      worst: false
-      odds: ''
-    adam:
-      pick: Geno Smith 225+ yards
-      status: won
-      worst: false
-      odds: ''
-    sam:
-      pick: Puka Nakua Anytime TD
-      status: won
-      worst: false
-      odds: ''
-    jeff:
-      pick: Green Bay Packers ML
-      status: lost
-      worst: false
-      odds: ''
-    mr_gaddi:
-      pick: Ja'Marr Chase Anytime TD
-      status: lost
-      worst: false
-      odds: ''
-    brad:
-      pick: Broncos/Texans o40.5 points
-      status: lost
-      worst: true
-      worst_status: ai
-      odds: "-110"
-    joe:
-      pick: Christian McCaffery rushing and receiving over 131.5
-      status: won
-      worst: false
-      odds: ''
-    jma:
-      pick: Josh Allen + Patrick Mahomes +475 combined passing
-      status: won
-      worst: false
-      odds: ''
-    mike:
-      pick: Puka Nakua Over 7.5 Rec
-      status: lost
-      worst: false
-      odds: "-115"
-    daniel:
-      pick: Dalton Kincaid o36.5 receiving
-      status: won
-      worst: false
-      odds: ''
-- week: 8
-  total_potential: 358
-  picks:
-    andy:
-      pick: San Francisco 49ers +2.5
-      status: lost
-      worst: false
-      odds: "-110"
-    adam:
-      pick: Tampa Bay Buccaneers -4.5
-      status: won
-      worst: false
-      odds: "-102"
-    sam:
-      pick: Philadelphia Eagles ML
-      status: won
-      worst: false
-      odds: ''
-    jeff:
-      pick: Buffalo Bills ML
-      status: won
-      worst: false
-      odds: "+115"
-    mr_gaddi:
-      pick: Ja'Marr Chase OVER 85.5 rec yards
-      status: won
-      worst: false
-      odds: "-114"
-    brad:
-      pick: Green Bay Packers ML
-      status: won
-      worst: false
-      odds: ''
-    joe:
-      pick: Swift over 13.5 rushing attempts
-      status: lost
-      worst: false
-      odds: ''
-    jma:
-      pick: James Cook +60 yds rushing
-      status: won
-      worst: false
-      odds: "-125"
-    mike:
-      pick: Bo Nix over 233 passing yards
-      status: won
-      worst: false
-      odds: "-115"
-    daniel:
-      pick: Swift o73.5 combined rush/receiving
-      status: lost
-      worst: false
-      odds: ''
-- week: 7
-  total_potential: 2122
-  picks:
-    andy:
-      pick: Kamara +50 yards
-      status: lost
-      worst: false
-      odds: ''
-    adam:
-      pick: Cleveland Browns -2.5
-      status: won
-      worst: false
-      odds: "-110"
-    sam:
-      pick: Seattle Seahawks ML
-      status: won
-      worst: false
-      odds: ''
-    jeff:
-      pick: Atlanta Falcons ML
-      status: lost
-      worst: false
-      odds: "+115"
-    mr_gaddi:
-      pick: Rome Odunze Anytime TD
-      status: lost
-      worst: false
-      odds: ''
-    brad:
-      pick: Philadelphia Eagles ML
-      status: won
-      worst: false
-      odds: ''
-    joe:
-      pick: Tet McMillan over 52.5 receiving yards
-      status: lost
-      worst: false
-      odds: ''
-    jma:
-      pick: Justin Fields +150yds passing
-      status: lost
-      worst: false
-      odds: ''
-    mike:
-      pick: Jayden Daniels over 232.5 passing yards
-      status: lost
-      worst: false
-      odds: ''
-    daniel:
-      pick: Colston Loveland 3+ receptions
-      status: won
-      worst: false
-      odds: ''
-- week: 6
-  total_potential: 1200
-  picks:
-    andy:
-      pick: Dallas Cowboys -3
-      status: lost
-      worst: false
-      odds: "-115"
-    adam:
-      pick: Aaron Rodgers Under 210.5 Passing Yards
-      status: lost
-      worst: false
-      odds: "-114"
-    sam:
-      pick: Drake Mae over 1.5 touchdowns
-      status: won
-      worst: false
-      odds: ''
-    jeff:
-      pick: Cleveland Browns +6.5
-      status: lost
-      worst: false
-      odds: "-110"
-    mr_gaddi:
-      pick: NE Patriots to win
-      status: won
-      worst: false
-      odds: ''
-    brad:
-      pick: Indianapolis Colts -5.5
-      status: lost
-      worst: false
-      odds: "-110"
-    joe:
-      pick: Davante Adams OVER 4.5 receptions
-      status: lost
-      worst: false
-      odds: "-114"
-    jma:
-      pick: Puka Nakua Anytime TD
-      status: lost
-      worst: false
-      odds: ''
-    mike:
-      pick: Brian Thomas Jr OVER 4.5 receptions
-      status: won
-      worst: true
-      odds: ''
-    daniel:
-      pick: Lions / Chiefs over 52.5 points
-      status: lost
-      worst: false
-      odds: "-110"
-- week: 5
-  total_potential: 2207
-  picks:
-    andy:
-      pick: Justin Fields anytime TD
-      status: lost
-      worst: false
-      odds: ''
-    adam:
-      pick: Jared Goff Over 225 yds
-      status: won
-      worst: false
-      odds: ''
-    sam:
-      pick: Jonathan Taylor anytime TD
-      status: won
-      worst: false
-      odds: ''
-    jeff:
-      pick: Seattle Seahawks -3
-      status: lost
-      worst: false
-      odds: "-110"
-    mr_gaddi:
-      pick: Indianapolis Colts -6.5
-      status: won
-      worst: false
-      odds: "-110"
-    brad:
-      pick: Dallas Cowboys -1.5
-      status: won
-      worst: false
-      odds: "-110"
-    joe:
-      pick: Chase Brown over 15.5 receiving yards
-      status: won
-      worst: false
-      odds: "-114"
-    jma:
-      pick: Baltimore Ravens +1.5
-      status: lost
-      worst: false
-      odds: "-110"
-    mike:
-      pick: Darren Waller O 29.5 Rec yards
-      status: won
-      worst: false
-      odds: ''
-    daniel:
-      pick: Gunnar Helm over 3 receptions
-      status: won
-      worst: false
-      odds: ''
-- week: 4
-  total_potential: 960
-  picks:
-    andy:
-      pick: James Cook over 74.5 rushing yards
-      status: won
-      worst: false
-      odds: "-110"
-    adam:
-      pick: Baltimore Ravens -2.5
-      status: lost
-      worst: false
-      odds: "-110"
-    sam:
-      pick: New England Patriots to win
-      status: won
-      worst: false
-      odds: ''
-    jeff:
-      pick: Los Angeles Rams -3.5
-      status: won
-      worst: false
-      odds: "-110"
-    mr_gaddi:
-      pick: Derrick Henry Anytime TD
-      status: lost
-      worst: false
-      odds: ''
-    brad:
-      pick: San Francisco 49ers to win
-      status: lost
-      worst: false
-      odds: ''
-    joe:
-      pick: Tucker Kraft OVER 3.5 receptions
-      status: won
-      worst: false
-      odds: "-114"
-    jma:
-      pick: Saquon Barkley 70+ yds rushing
-      status: lost
-      worst: false
-      odds: ''
-    mike:
-      pick: Los Angeles Chargers to win
-      status: lost
-      worst: false
-      odds: ''
-    daniel:
-      pick: Bears vs Raiders over 47.5
-      status: won
-      worst: false
-      odds: "-110"
-- week: 3
-  total_potential: 1114
-  picks:
-    andy:
-      pick: Detroit Lions  +5.5
-      status: won
-      worst: false
-      odds: ''
-    adam:
-      pick: Pittsburgh Steelers -1.5
-      status: won
-      worst: false
-      odds: ''
-    sam:
-      pick: Jordan Mason over 2.5 receptions
-      status: lost
-      worst: true
-      odds: "-325"
-    jeff:
-      pick: Seattle Seahawks to win
-      status: won
-      worst: false
-      odds: "-385"
-    mr_gaddi:
-      pick: KC Chiefs to win
-      status: won
-      worst: false
-      odds: "-300"
-    brad:
-      pick: Indianapolis Colts to win
-      status: won
-      worst: false
-      odds: "-320"
-    joe:
-      pick: George Pickens over 3.5 receptions
-      status: won
-      worst: false
-      odds: "-138"
-    jma:
-      pick: Daniel Jones over 200 yards passing
-      status: won
-      worst: false
-      odds: ''
-    mike:
-      pick: Justin Jefferson Over 70.5 receiving yards
-      status: won
-      worst: false
-      odds: ''
-    daniel:
-      pick: Tampa Bay to win
-      status: won
-      worst: false
-      odds: ''
-- week: 2
-  total_potential: 1954
-  picks:
-    andy:
-      pick: Broncos -2.5
-      status: lost
-      worst: false
-      odds: ''
-    adam:
-      pick: Dallas Cowboys -5.5
-      status: lost
-      worst: false
-      odds: ''
-    sam:
-      pick: Jordan Love under 238.5 passing yards
-      status: lost
-      worst: false
-      odds: ''
-    jeff:
-      pick: Arizona Cardinals ML
-      status: won
-      worst: false
-      odds: ''
-    mr_gaddi:
-      pick: Josh Allen Anytime TD
-      status: lost
-      worst: false
-      odds: "-130"
-    brad:
-      pick: Bengals Win
-      status: won
-      worst: false
-      odds: "-180"
-    joe:
-      pick: AJ Brown OVER 3.5 receptions
-      status: won
-      worst: false
-      odds: "-278"
-    jma:
-      pick: CeeDee Lamb Anytime TD
-      status: lost
-      worst: false
-      odds: "+100"
-    mike:
-      pick: Austin Ekeler over 23.5 rec yards
-      status: lost
-      worst: true
-      odds: ''
-    daniel:
-      pick: Deebo Samuel over 4.5 catches
-      status: won
-      worst: false
-      odds: ''
-- week: 1
-  total_potential: 1798
-  picks:
-    andy:
-      pick: Puka to have more than 5.5 receptions
-      status: won
-      worst: false
-      odds: "-158"
-    adam:
-      pick: Joe Flacco Over 235.5 pass yards
-      status: won
-      worst: false
-      odds: "-114"
-    sam:
-      pick: Barkley Anytime TD
-      status: won
-      worst: false
-      odds: "-195"
-    jeff:
-      pick: Wisconsin/Middle TN Under 45.5
-      status: lost
-      worst: true
-      odds: "-115"
-    mr_gaddi:
-      pick: Christian McCaffery anytime TD
-      status: lost
-      worst: false
-      odds: "-145"
-    brad:
-      pick: Bears first drive punt
-      status: lost
-      worst: false
-      odds: ''
-    joe:
-      pick: Trey McBride 40+ Receiving Yards
-      status: won
-      worst: false
-      odds: ''
-    jma:
-      pick: Bears/Vikings 1st qtr over +7.5
-      status: lost
-      worst: false
-      odds: "+102"
-    mike:
-      pick: TreVon Henderson over 2.5 rec
-      status: won
-      worst: false
-      odds: ''
-    daniel:
-      pick: Cooper Kupp over 38.5
-      status: lost
-      worst: false
-      odds: "-114"
+  - week: 18
+    total_potential: "∞"
+    worst_rationale: ___
+    picks:
+      andy:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      adam:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      sam:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      jeff:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      brad:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      joe:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      jma:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      mike:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      daniel:
+        pick: ___
+        status: pending
+        worst: false
+        worst_status: ai
+        odds: ""
+  - week: 17
+    total_potential: 1336
+    worst_rationale: ___
+    picks:
+      andy:
+        pick: Colston Loveland +50 yards receiving
+        status: won
+        worst: false
+        odds: ""
+      adam:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      sam:
+        pick: Jacksonville Jaguars -5.5
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Seattle Seahawks -7
+        status: won
+        worst: false
+        odds: "+100"
+      mr_gaddi:
+        pick: Cincinnati Bengals ML
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Tennessee Titans +4.5 (alt line)
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      joe:
+        pick: Trey McBride anytime TD
+        status: won
+        worst: false
+        odds: ""
+      jma:
+        pick: Caleb Williams +15 yds rushing
+        status: won
+        worst: false
+        odds: ""
+      mike:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+      daniel:
+        pick: Shedeur Sanders 15+ rushing yards
+        status: won
+        worst: false
+        odds: ""
+  - week: 16
+    total_potential: "∞"
+    worst_rationale: Dallas wasn't just a little off - they lost outright by 17 (Chargers 34, Cowboys 17), so the -3.5 never had a chance once the game got away from them.
+    picks:
+      andy:
+        pick: Dallas Cowboys -3.5
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      adam:
+        pick: NE Patriots +3.5
+        status: won
+        worst: false
+        odds: ""
+      sam:
+        pick: CMC anytime TD
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Detroit Lions -3 (alt)
+        status: lost
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: Colston Loveland anytime TD
+        status: lost
+        worst: false
+        odds: ""
+      brad:
+        pick: Oregon Ducks -20.5
+        status: lost
+        worst: false
+        odds: ""
+      joe:
+        pick: Achane over 115.5 rushing and receiivng
+        status: lost
+        worst: false
+        odds: ""
+      jma:
+        pick: Caleb Williams over 200 yds passing
+        status: won
+        worst: false
+        odds: ""
+      mike:
+        pick: Ladd McConkey over 3.5 receptions
+        status: won
+        worst: false
+        odds: ""
+      daniel:
+        pick: Ben Sinnott o1.5 receptions
+        status: lost
+        worst: false
+        odds: ""
+  - week: 15
+    total_potential: "∞"
+    worst_rationale: Stefon Diggs anytime TD was the weakest bet due to volatility and dependency on a single, unpredictable scoring event.
+    picks:
+      andy:
+        pick: Swift +60 rushing yards
+        status: won
+        worst: false
+        odds: ""
+      adam:
+        pick: None
+        status: pending
+        worst: false
+        odds: ""
+      sam:
+        pick: Jaxson Dart over 205 passing yards
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: KC -3 alt line
+        status: lost
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: Matt Stafford Alt Pass Yards 250+
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Chicago Bears ML
+        status: won
+        worst: false
+        odds: ""
+      joe:
+        pick: Caleb over 17.5 rushing yards
+        status: lost
+        worst: false
+        odds: ""
+      jma:
+        pick: Burrow & Jackson under 525 pass yards
+        status: won
+        worst: false
+        odds: ""
+      mike:
+        pick: Stefon Diggs anytime TD
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      daniel:
+        pick: ___
+        status: pending
+        worst: false
+        odds: ""
+  - week: 14
+    total_potential: "∞"
+    worst_rationale:
+      Backing the Colts to win (with a spread) paid nothing because they
+      lost, making that bet far more punishing than a failed player prop or a money-line
+      on a different underdog.
+    picks:
+      andy:
+        pick: Indianapolis Colts -1.5
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      adam:
+        pick: None
+        status: pending
+        worst: false
+        odds: ""
+      sam:
+        pick: Chicago Bears +6.5
+        status: lost
+        worst: false
+        odds: ""
+      jeff:
+        pick: Los Angeles Rams ML
+        status: won
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: Buffalo Bills ML
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Cleveland Browns ML
+        status: lost
+        worst: false
+        odds: ""
+      joe:
+        pick: Jonathan Taylor over 17.5 receiving yards
+        status: lost
+        worst: false
+        odds: ""
+      jma:
+        pick: Patrick Mahomes over 230 passing yards
+        status: lost
+        worst: false
+        odds: ""
+      mike:
+        pick: None
+        status: pending
+        worst: false
+        odds: ""
+      daniel:
+        pick: Pat Freiermuth over 2.5 receptions
+        status: lost
+        worst: false
+        odds: ""
+  - week: 13
+    total_potential: 1704
+    worst_rationale:
+      Because the Colts lost their Week 13 game outright (20-16 to the
+      Houston Texans), the spread bet failed — whereas the player-props (for example
+      Jaxon Smith-Njigba anytime TD or Kyren Williams over 1.5 receptions) at least
+      had a chance to hit even if the team lost.
+    picks:
+      andy:
+        pick: Buffalo Bills -3
+        status: won
+        worst: false
+        odds: ""
+      adam:
+        pick: Indianapolis Colts -3
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      sam:
+        pick: Seattle Seahawks ML
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Los Angeles Rams ML
+        status: lost
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: De'von Achane OVER 78.5 rushing yards
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Jaxon Smith-Njigba anytime TD
+        status: lost
+        worst: false
+        odds: ""
+      joe:
+        pick: Kyren Williams over 1.5 receptions
+        status: lost
+        worst: false
+        odds: ""
+      jma:
+        pick: Jalen Hurts under 240 passing yards
+        status: won
+        worst: false
+        odds: ""
+      mike:
+        pick: Jaxon Smith-Njigba over receptions
+        status: lost
+        worst: false
+        odds: ""
+      daniel:
+        pick: Justin Jefferson anytime TD
+        status: lost
+        worst: false
+        odds: ""
+  - week: 12
+    total_potential: "∞"
+    worst_rationale:
+      A total of 47.5 points in that matchup is ambitious given both
+      teams’ defensive capabilities and recent trend toward lower scoring, making it
+      the least likely of the three bets to hit.
+    picks:
+      andy:
+        pick: Courtland Loveland 3+ receptions
+        status: won
+        worst: false
+        odds: ""
+      adam:
+        pick: PHI/DAL O47.5
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      sam:
+        pick: NE Patriots ML
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Detroit Lions ML
+        status: won
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: San Francisco 49ers ML
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Chicago Bears ML
+        status: won
+        worst: false
+        odds: ""
+      joe:
+        pick: JJ McCarthy over 0.5 INT
+        status: won
+        worst: false
+        odds: ""
+      jma:
+        pick: Cam Ward over 0.5 INT
+        status: lost
+        worst: false
+        odds: ""
+      mike:
+        pick: Stefon Diggs over rec yards
+        status: lost
+        worst: false
+        odds: ""
+      daniel:
+        pick: Caleb Williams o22.5 rushing
+        status: lost
+        worst: false
+        odds: ""
+  - week: 11
+    total_potential: 1265
+    worst_rationale:
+      The Falcons money-line is the worst bet because Atlanta has been
+      inconsistent and often struggles to win outright, while the Odunze and Robinson
+      yardage props align more closely with their typical performance averages and rely
+      on individual output rather than full team success.
+    picks:
+      andy:
+        pick: Rome Odunze +50 receiving yards
+        status: lost
+        worst: false
+        odds: ""
+      adam:
+        pick: TB/Buf O46.5
+        status: won
+        worst: false
+        odds: ""
+      sam:
+        pick: Winston OVER 0.5 interceptions thrown
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Atlanta Falcons ML
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      mr_gaddi:
+        pick: San Francisco 49ers ML
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Chicago Bears ML
+        status: won
+        worst: false
+        odds: ""
+      joe:
+        pick: Swift over 54.5 yards
+        status: won
+        worst: false
+        odds: ""
+      jma:
+        pick: "--"
+        status: pending
+        worst: false
+        odds: ""
+      mike:
+        pick: "--"
+        status: pending
+        worst: false
+        odds: ""
+      daniel:
+        pick: Ladd McConkey over something (forced by Brad)
+        status: lost
+        worst: false
+        odds: ""
+  - week: 10
+    total_potential: 1033
+    worst_rationale:
+      If I must pick one as the worst bet this week, I'd pick the combined
+      QB yards (Jackson + McCarthy over 425). The requirement for both to hit high yardage
+      makes it a tougher proposition compared to the others.
+    picks:
+      andy:
+        pick: Colston Loveland +30 yards
+        status: won
+        worst: false
+        odds: ""
+      adam:
+        pick: Bears/Giants O46.5
+        status: lost
+        worst: false
+        odds: ""
+      sam:
+        pick: Chicago Bears ML
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Seattle Seahawks ML
+        status: won
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: Los Angeles Rams ML
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Buffalo Bills alt spread -6.5
+        status: lost
+        worst: false
+        odds: "-165"
+      joe:
+        pick: JJ McCarthy over 18.5
+        status: won
+        worst: false
+        odds: ""
+      jma:
+        pick: Lamar Jackson and JJ McCarthy over 425 yds
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: ""
+      mike:
+        pick: Bam Knight 10+ rec yards
+        status: lost
+        worst: false
+        odds: ""
+      daniel:
+        pick: Greg Dulcich o2.5 receptions
+        status: lost
+        worst: false
+        odds: ""
+  - week: 9
+    total_potential: "∞"
+    worst_rationale:
+      If I must pick one as the “worst bet” this week, I'd pick the Broncos/Texans
+      over 40.5 points. The odds are weaker for it relative to the others given the
+      potential for a defensive, lower-scoring game.
+    picks:
+      andy:
+        pick: Colston Loveland +30 yards
+        status: won
+        worst: false
+        odds: ""
+      adam:
+        pick: Geno Smith 225+ yards
+        status: won
+        worst: false
+        odds: ""
+      sam:
+        pick: Puka Nakua Anytime TD
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Green Bay Packers ML
+        status: lost
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: Ja'Marr Chase Anytime TD
+        status: lost
+        worst: false
+        odds: ""
+      brad:
+        pick: Broncos/Texans o40.5 points
+        status: lost
+        worst: true
+        worst_status: ai
+        odds: "-110"
+      joe:
+        pick: Christian McCaffery rushing and receiving over 131.5
+        status: won
+        worst: false
+        odds: ""
+      jma:
+        pick: Josh Allen + Patrick Mahomes +475 combined passing
+        status: won
+        worst: false
+        odds: ""
+      mike:
+        pick: Puka Nakua Over 7.5 Rec
+        status: lost
+        worst: false
+        odds: "-115"
+      daniel:
+        pick: Dalton Kincaid o36.5 receiving
+        status: won
+        worst: false
+        odds: ""
+  - week: 8
+    total_potential: 358
+    picks:
+      andy:
+        pick: San Francisco 49ers +2.5
+        status: lost
+        worst: false
+        odds: "-110"
+      adam:
+        pick: Tampa Bay Buccaneers -4.5
+        status: won
+        worst: false
+        odds: "-102"
+      sam:
+        pick: Philadelphia Eagles ML
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Buffalo Bills ML
+        status: won
+        worst: false
+        odds: "+115"
+      mr_gaddi:
+        pick: Ja'Marr Chase OVER 85.5 rec yards
+        status: won
+        worst: false
+        odds: "-114"
+      brad:
+        pick: Green Bay Packers ML
+        status: won
+        worst: false
+        odds: ""
+      joe:
+        pick: Swift over 13.5 rushing attempts
+        status: lost
+        worst: false
+        odds: ""
+      jma:
+        pick: James Cook +60 yds rushing
+        status: won
+        worst: false
+        odds: "-125"
+      mike:
+        pick: Bo Nix over 233 passing yards
+        status: won
+        worst: false
+        odds: "-115"
+      daniel:
+        pick: Swift o73.5 combined rush/receiving
+        status: lost
+        worst: false
+        odds: ""
+  - week: 7
+    total_potential: 2122
+    picks:
+      andy:
+        pick: Kamara +50 yards
+        status: lost
+        worst: false
+        odds: ""
+      adam:
+        pick: Cleveland Browns -2.5
+        status: won
+        worst: false
+        odds: "-110"
+      sam:
+        pick: Seattle Seahawks ML
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Atlanta Falcons ML
+        status: lost
+        worst: false
+        odds: "+115"
+      mr_gaddi:
+        pick: Rome Odunze Anytime TD
+        status: lost
+        worst: false
+        odds: ""
+      brad:
+        pick: Philadelphia Eagles ML
+        status: won
+        worst: false
+        odds: ""
+      joe:
+        pick: Tet McMillan over 52.5 receiving yards
+        status: lost
+        worst: false
+        odds: ""
+      jma:
+        pick: Justin Fields +150yds passing
+        status: lost
+        worst: false
+        odds: ""
+      mike:
+        pick: Jayden Daniels over 232.5 passing yards
+        status: lost
+        worst: false
+        odds: ""
+      daniel:
+        pick: Colston Loveland 3+ receptions
+        status: won
+        worst: false
+        odds: ""
+  - week: 6
+    total_potential: 1200
+    picks:
+      andy:
+        pick: Dallas Cowboys -3
+        status: lost
+        worst: false
+        odds: "-115"
+      adam:
+        pick: Aaron Rodgers Under 210.5 Passing Yards
+        status: lost
+        worst: false
+        odds: "-114"
+      sam:
+        pick: Drake Mae over 1.5 touchdowns
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Cleveland Browns +6.5
+        status: lost
+        worst: false
+        odds: "-110"
+      mr_gaddi:
+        pick: NE Patriots to win
+        status: won
+        worst: false
+        odds: ""
+      brad:
+        pick: Indianapolis Colts -5.5
+        status: lost
+        worst: false
+        odds: "-110"
+      joe:
+        pick: Davante Adams OVER 4.5 receptions
+        status: lost
+        worst: false
+        odds: "-114"
+      jma:
+        pick: Puka Nakua Anytime TD
+        status: lost
+        worst: false
+        odds: ""
+      mike:
+        pick: Brian Thomas Jr OVER 4.5 receptions
+        status: won
+        worst: true
+        odds: ""
+      daniel:
+        pick: Lions / Chiefs over 52.5 points
+        status: lost
+        worst: false
+        odds: "-110"
+  - week: 5
+    total_potential: 2207
+    picks:
+      andy:
+        pick: Justin Fields anytime TD
+        status: lost
+        worst: false
+        odds: ""
+      adam:
+        pick: Jared Goff Over 225 yds
+        status: won
+        worst: false
+        odds: ""
+      sam:
+        pick: Jonathan Taylor anytime TD
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Seattle Seahawks -3
+        status: lost
+        worst: false
+        odds: "-110"
+      mr_gaddi:
+        pick: Indianapolis Colts -6.5
+        status: won
+        worst: false
+        odds: "-110"
+      brad:
+        pick: Dallas Cowboys -1.5
+        status: won
+        worst: false
+        odds: "-110"
+      joe:
+        pick: Chase Brown over 15.5 receiving yards
+        status: won
+        worst: false
+        odds: "-114"
+      jma:
+        pick: Baltimore Ravens +1.5
+        status: lost
+        worst: false
+        odds: "-110"
+      mike:
+        pick: Darren Waller O 29.5 Rec yards
+        status: won
+        worst: false
+        odds: ""
+      daniel:
+        pick: Gunnar Helm over 3 receptions
+        status: won
+        worst: false
+        odds: ""
+  - week: 4
+    total_potential: 960
+    picks:
+      andy:
+        pick: James Cook over 74.5 rushing yards
+        status: won
+        worst: false
+        odds: "-110"
+      adam:
+        pick: Baltimore Ravens -2.5
+        status: lost
+        worst: false
+        odds: "-110"
+      sam:
+        pick: New England Patriots to win
+        status: won
+        worst: false
+        odds: ""
+      jeff:
+        pick: Los Angeles Rams -3.5
+        status: won
+        worst: false
+        odds: "-110"
+      mr_gaddi:
+        pick: Derrick Henry Anytime TD
+        status: lost
+        worst: false
+        odds: ""
+      brad:
+        pick: San Francisco 49ers to win
+        status: lost
+        worst: false
+        odds: ""
+      joe:
+        pick: Tucker Kraft OVER 3.5 receptions
+        status: won
+        worst: false
+        odds: "-114"
+      jma:
+        pick: Saquon Barkley 70+ yds rushing
+        status: lost
+        worst: false
+        odds: ""
+      mike:
+        pick: Los Angeles Chargers to win
+        status: lost
+        worst: false
+        odds: ""
+      daniel:
+        pick: Bears vs Raiders over 47.5
+        status: won
+        worst: false
+        odds: "-110"
+  - week: 3
+    total_potential: 1114
+    picks:
+      andy:
+        pick: Detroit Lions  +5.5
+        status: won
+        worst: false
+        odds: ""
+      adam:
+        pick: Pittsburgh Steelers -1.5
+        status: won
+        worst: false
+        odds: ""
+      sam:
+        pick: Jordan Mason over 2.5 receptions
+        status: lost
+        worst: true
+        odds: "-325"
+      jeff:
+        pick: Seattle Seahawks to win
+        status: won
+        worst: false
+        odds: "-385"
+      mr_gaddi:
+        pick: KC Chiefs to win
+        status: won
+        worst: false
+        odds: "-300"
+      brad:
+        pick: Indianapolis Colts to win
+        status: won
+        worst: false
+        odds: "-320"
+      joe:
+        pick: George Pickens over 3.5 receptions
+        status: won
+        worst: false
+        odds: "-138"
+      jma:
+        pick: Daniel Jones over 200 yards passing
+        status: won
+        worst: false
+        odds: ""
+      mike:
+        pick: Justin Jefferson Over 70.5 receiving yards
+        status: won
+        worst: false
+        odds: ""
+      daniel:
+        pick: Tampa Bay to win
+        status: won
+        worst: false
+        odds: ""
+  - week: 2
+    total_potential: 1954
+    picks:
+      andy:
+        pick: Broncos -2.5
+        status: lost
+        worst: false
+        odds: ""
+      adam:
+        pick: Dallas Cowboys -5.5
+        status: lost
+        worst: false
+        odds: ""
+      sam:
+        pick: Jordan Love under 238.5 passing yards
+        status: lost
+        worst: false
+        odds: ""
+      jeff:
+        pick: Arizona Cardinals ML
+        status: won
+        worst: false
+        odds: ""
+      mr_gaddi:
+        pick: Josh Allen Anytime TD
+        status: lost
+        worst: false
+        odds: "-130"
+      brad:
+        pick: Bengals Win
+        status: won
+        worst: false
+        odds: "-180"
+      joe:
+        pick: AJ Brown OVER 3.5 receptions
+        status: won
+        worst: false
+        odds: "-278"
+      jma:
+        pick: CeeDee Lamb Anytime TD
+        status: lost
+        worst: false
+        odds: "+100"
+      mike:
+        pick: Austin Ekeler over 23.5 rec yards
+        status: lost
+        worst: true
+        odds: ""
+      daniel:
+        pick: Deebo Samuel over 4.5 catches
+        status: won
+        worst: false
+        odds: ""
+  - week: 1
+    total_potential: 1798
+    picks:
+      andy:
+        pick: Puka to have more than 5.5 receptions
+        status: won
+        worst: false
+        odds: "-158"
+      adam:
+        pick: Joe Flacco Over 235.5 pass yards
+        status: won
+        worst: false
+        odds: "-114"
+      sam:
+        pick: Barkley Anytime TD
+        status: won
+        worst: false
+        odds: "-195"
+      jeff:
+        pick: Wisconsin/Middle TN Under 45.5
+        status: lost
+        worst: true
+        odds: "-115"
+      mr_gaddi:
+        pick: Christian McCaffery anytime TD
+        status: lost
+        worst: false
+        odds: "-145"
+      brad:
+        pick: Bears first drive punt
+        status: lost
+        worst: false
+        odds: ""
+      joe:
+        pick: Trey McBride 40+ Receiving Yards
+        status: won
+        worst: false
+        odds: ""
+      jma:
+        pick: Bears/Vikings 1st qtr over +7.5
+        status: lost
+        worst: false
+        odds: "+102"
+      mike:
+        pick: TreVon Henderson over 2.5 rec
+        status: won
+        worst: false
+        odds: ""
+      daniel:
+        pick: Cooper Kupp over 38.5
+        status: lost
+        worst: false
+        odds: "-114"
