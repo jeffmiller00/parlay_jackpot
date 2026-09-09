@@ -37,6 +37,13 @@ WIN_STATUSES  = %w[won ai_won].freeze
 LOSS_STATUSES = %w[lost ai_lost].freeze
 FINAL_STATUSES = (WIN_STATUSES + LOSS_STATUSES).freeze
 
+# A pick is "not made yet" if it is empty or a placeholder.
+# Historical data uses several placeholder forms: _, ___, --, None.
+def blank_pick?(value)
+  s = value.to_s.strip
+  s.empty? || s.match?(/\A_+\z/) || s.match?(/\A-+\z/) || s.casecmp?("none")
+end
+
 
 DATA_FILE = File.expand_path('../_data/weeks.yml', __dir__)
 
@@ -48,6 +55,7 @@ end
 @content = YAML.load_file(DATA_FILE)
 @weeks = @content['weeks'] || []
 @current_week_num = @weeks.map { |w| w['week'] }.max || 1
+@season = @content['season'] || Time.now.year
 
 def ai_guess?
   !!(ENV['JEKYLL_ENV'] == 'production' || false)
@@ -63,7 +71,7 @@ puts '|==================================================='
 puts '|=== SCRIPT START =================================='
 puts '|==================================================='
 
-boxscore_url = "https://www.espn.com/nfl/scoreboard/_/week/#{@current_week_num}/year/2025/seasontype/2"
+boxscore_url = "https://www.espn.com/nfl/scoreboard/_/week/#{@current_week_num}/year/#{@season}/seasontype/2"
 prompt = ''
 api_key = ENV['OPENAI_KEY'] || ENV['OPENAI_API_KEY']
 
@@ -85,7 +93,7 @@ elsif Date.today.strftime('%A') == 'Thursday' && Time.now.hour < 19
   puts "| Today is #{Date.today.strftime('%A')} before 7 PM - skipping bet evaluation."
 else
   current_week.dig('picks').each do |name, pick_info|
-    if pick_info['pick'] == '_'
+    if blank_pick?(pick_info['pick'])
       puts "| #{name} has not made a pick yet, skipping"
       next
     end
