@@ -76,10 +76,14 @@ target = options[:week] || weeks.map { |w| w['week'].to_i }.max
 week   = weeks.find { |w| w['week'].to_i == target }
 abort "Week #{target} is not in weeks.yml." if week.nil?
 
-boxscore_url = "https://www.espn.com/nfl/scoreboard/_/week/#{target}/year/#{season}/seasontype/2"
+# Picks are not always NFL - the pool takes college games too - so give the
+# model both scoreboards and let it decide which one the bet belongs to.
+nfl_url = "https://www.espn.com/nfl/scoreboard/_/week/#{target}/year/#{season}/seasontype/2"
+cfb_url = "https://www.espn.com/college-football/scoreboard/_/week/#{target}/year/#{season}/seasontype/2"
 
 puts "Grading season #{season}, week #{target}."
-puts "Reference: #{boxscore_url}"
+puts "NFL:     #{nfl_url}"
+puts "College: #{cfb_url}"
 puts
 
 graded    = []
@@ -95,10 +99,11 @@ week['picks'].each do |name, info|
     next
   end
 
-  prompt = "Based on any of these box scores for Week ##{target} of the #{season} NFL season: " \
-           "#{boxscore_url} Did this bet win? #{info['pick']} If you don't know or it has not " \
-           'been settled yet, please respond with a result of "pending". Please respond only ' \
-           'with JSON {result: true/false/unknown, rationale: "..." }'
+  prompt = "This bet was placed for week #{target} of the #{season} football season. It may " \
+           'be an NFL game or a college football game - do not assume NFL. Box scores: ' \
+           "NFL #{nfl_url} - college #{cfb_url} . Did this bet win? #{info['pick']} " \
+           'If you do not know, or it has not been settled yet, respond with a result of ' \
+           '"unknown". Respond only with JSON {"result": true/false/unknown, "rationale": "..."}'
 
   response = Typhoeus.post(
     'https://api.openai.com/v1/responses',
