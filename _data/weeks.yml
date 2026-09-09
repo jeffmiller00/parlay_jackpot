@@ -1,6 +1,6 @@
 ---
 season: 2026
-version: 0
+version: 1788974103
 weeks:
 - week: 1
   total_potential: 0
@@ -52,10 +52,10 @@ weeks:
       worst: false
       odds: "-114"
     daniel:
-      pick: ___
+      pick: Cam Ward O 8.5 rushing yards
       status: pending
       worst: false
-      odds: ''
+      odds: "-114"
     josh:
       pick: ___
       status: pending
