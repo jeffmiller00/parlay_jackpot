@@ -56,6 +56,12 @@ players:
     name: Mike
   - id: daniel
     name: Daniel
+  - id: josh
+    name: Josh
+  - id: yerkes
+    name: Yerkes
+  - id: piers
+    name: Piers
 
 # Exclude from processing.
 # The following items will not be processed, by default.

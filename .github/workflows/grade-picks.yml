@@ -1,0 +1,75 @@
+name: Grade picks
+
+# Grades the week's pending picks and commits the verdicts as ai_won / ai_lost.
+# Requires an OPENAI_KEY repository secret; without it the script exits non-zero
+# and the run fails loudly rather than silently doing nothing.
+#
+# Cron is UTC. Central is UTC-5 until the first Sunday in November and UTC-6
+# after it, so this fires an hour later in Central once the clocks change.
+
+on:
+  schedule:
+    - cron: '0 14 * * 2'   # Tuesday, ~09:00 CT - after Monday Night Football
+  workflow_dispatch:
+    inputs:
+      week:
+        description: 'Week to grade (blank = latest week in weeks.yml)'
+        required: false
+        type: string
+      dry_run:
+        description: 'Call the API but do not write or commit results'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# Both this and import-picks.yml write _data/weeks.yml. Queue them rather than
+# letting two runs race to push the same file.
+concurrency:
+  group: weeks-data
+  cancel-in-progress: false
+
+jobs:
+  grade:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+
+      - name: Grade pending picks
+        env:
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          WEEK: ${{ inputs.week }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [ -z "$OPENAI_KEY" ]; then
+            echo "::error::OPENAI_KEY secret is not set. Add it with: gh secret set OPENAI_KEY"
+            exit 1
+          fi
+          args=()
+          if [ -n "$WEEK" ]; then
+            args+=(--week "$WEEK")
+          fi
+          if [ "$DRY_RUN" = "true" ]; then
+            args+=(--dry-run)
+          fi
+          bundle exec ruby scripts/grade_picks.rb "${args[@]}"
+
+      - name: Commit and push
+        run: |
+          if git diff --quiet -- _data/weeks.yml; then
+            echo "No grading changes to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/weeks.yml
+          git commit -m "Grade picks"
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main

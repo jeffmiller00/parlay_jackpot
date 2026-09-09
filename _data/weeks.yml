@@ -7,7 +7,7 @@ weeks:
   worst_rationale: ___
   picks:
     andy:
-      pick: ___
+      pick: Omarian Hampton +60 rushing yards
       status: pending
       worst: false
       odds: ''
@@ -17,7 +17,7 @@ weeks:
       worst: false
       odds: ''
     sam:
-      pick: ___
+      pick: Kenneth Walker anytime TD
       status: pending
       worst: false
       odds: ''
@@ -27,12 +27,12 @@ weeks:
       worst: false
       odds: ''
     mr_gaddi:
-      pick: ___
+      pick: D. Achane Alt Rushing Yards 60+
       status: pending
       worst: false
       odds: ''
     brad:
-      pick: ___
+      pick: Cam Ward under 0.5 INT
       status: pending
       worst: false
       odds: ''
@@ -42,16 +42,31 @@ weeks:
       worst: false
       odds: ''
     jma:
-      pick: ___
+      pick: Kentucky  + 14.5  vs Alabama
       status: pending
       worst: false
-      odds: ''
+      odds: "-175"
     mike:
+      pick: AJ Brown O 62.5 rec yards
+      status: pending
+      worst: false
+      odds: "-114"
+    daniel:
       pick: ___
       status: pending
       worst: false
       odds: ''
-    daniel:
+    josh:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    yerkes:
+      pick: Loveland touchdown
+      status: pending
+      worst: false
+      odds: "+185"
+    piers:
       pick: ___
       status: pending
       worst: false

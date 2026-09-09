@@ -1,0 +1,71 @@
+name: Import picks
+
+# Pulls the current week's picks from the Google Sheet into _data/weeks.yml and
+# commits them. Cloudflare Pages deploys on push, so a successful run puts the
+# picks on parlayluck.com without any further action.
+#
+# Cron is UTC. Central is UTC-5 until the first Sunday in November and UTC-6
+# after it, so these fire an hour later in Central once the clocks change.
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # daily, ~07:00 CT - sweep up picks as they land
+    - cron: '0 22 * * 4'   # Thursday, ~17:00 CT - last sweep before kickoff
+  workflow_dispatch:
+    inputs:
+      week:
+        description: 'Week to import (blank = latest week in weeks.yml)'
+        required: false
+        type: string
+      new_week:
+        description: 'Append the next week before importing'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# Both this and grade-picks.yml write _data/weeks.yml. Queue them rather than
+# letting two runs race to push the same file.
+concurrency:
+  group: weeks-data
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+
+      - name: Import picks from the sheet
+        env:
+          WEEK: ${{ inputs.week }}
+          NEW_WEEK: ${{ inputs.new_week }}
+        run: |
+          args=()
+          if [ -n "$WEEK" ]; then
+            args+=(--week "$WEEK")
+          fi
+          if [ "$NEW_WEEK" = "true" ]; then
+            args+=(--new-week)
+          fi
+          bundle exec ruby scripts/import_picks.rb "${args[@]}"
+
+      - name: Commit and push
+        run: |
+          if git diff --quiet -- _data/weeks.yml; then
+            echo "No pick changes to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/weeks.yml
+          git commit -m "Import picks from the sheet"
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
