@@ -1,9 +1,9 @@
 ---
 season: 2026
-version: 1788974103
+version: 1788989542
 weeks:
 - week: 1
-  total_potential: 0
+  total_potential: 8420
   worst_rationale: ___
   picks:
     andy:
