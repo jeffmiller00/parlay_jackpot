@@ -18,6 +18,7 @@
 
 require 'yaml'
 require 'json'
+require 'date'
 require 'optparse'
 require 'typhoeus'
 require 'dotenv/load'
@@ -43,6 +44,21 @@ end.parse!
 def blank_pick?(value)
   s = value.to_s.strip
   s.empty? || s.match?(/\A_+\z/) || s.match?(/\A-+\z/) || s.casecmp?('none')
+end
+
+def week_date_range(season, week)
+  url = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard' \
+        "?dates=#{season}&seasontype=2&week=#{week}"
+  res = Typhoeus.get(url, followlocation: true, timeout: 30)
+  return nil unless res.success?
+
+  dates = JSON.parse(res.body).fetch('events', [])
+              .map { |e| e['date'].to_s[0, 10] }
+              .reject(&:empty?)
+              .sort
+  dates.empty? ? nil : [dates.first, dates.last]
+rescue StandardError
+  nil
 end
 
 def extract_text(payload)
@@ -76,14 +92,27 @@ target = options[:week] || weeks.map { |w| w['week'].to_i }.max
 week   = weeks.find { |w| w['week'].to_i == target }
 abort "Week #{target} is not in weeks.yml." if week.nil?
 
-# Picks are not always NFL - the pool takes college games too - so give the
-# model both scoreboards and let it decide which one the bet belongs to.
+# Picks are not always NFL - the pool takes college games too. College week
+# numbers do not line up with NFL ones (NFL week 1 of 2026 runs Sep 10-15,
+# which straddles what ESPN calls college week 2), so the college scoreboard
+# is addressed by date and the model is told to match on dates.
 nfl_url = "https://www.espn.com/nfl/scoreboard/_/week/#{target}/year/#{season}/seasontype/2"
-cfb_url = "https://www.espn.com/college-football/scoreboard/_/week/#{target}/year/#{season}/seasontype/2"
+range   = week_date_range(season, target)
+
+if range
+  window   = "The games ran #{range.first} through #{range.last}. "
+  cfb_urls = (Date.parse(range.first)..Date.parse(range.last)).select(&:saturday?).map do |d|
+    "https://www.espn.com/college-football/scoreboard/_/date/#{d.strftime('%Y%m%d')}"
+  end
+else
+  window   = ''
+  cfb_urls = ["https://www.espn.com/college-football/scoreboard/_/year/#{season}"]
+end
 
 puts "Grading season #{season}, week #{target}."
+puts "Window:  #{range ? "#{range.first} to #{range.last}" : 'unknown'}"
 puts "NFL:     #{nfl_url}"
-puts "College: #{cfb_url}"
+puts "College: #{cfb_urls.join(' ')}"
 puts
 
 graded    = []
@@ -99,9 +128,11 @@ week['picks'].each do |name, info|
     next
   end
 
-  prompt = "This bet was placed for week #{target} of the #{season} football season. It may " \
-           'be an NFL game or a college football game - do not assume NFL. Box scores: ' \
-           "NFL #{nfl_url} - college #{cfb_url} . Did this bet win? #{info['pick']} " \
+  prompt = "This bet was placed for week #{target} of the #{season} football season. #{window}" \
+           'It may be an NFL game or a college football game - do not assume NFL. College ' \
+           'football week numbers do not match NFL week numbers, so identify the game by ' \
+           "date, not by week number. NFL box scores: #{nfl_url} . College box scores: " \
+           "#{cfb_urls.join(' ')} . Did this bet win? #{info['pick']} " \
            'If you do not know, or it has not been settled yet, respond with a result of ' \
            '"unknown". Respond only with JSON {"result": true/false/unknown, "rationale": "..."}'
 
