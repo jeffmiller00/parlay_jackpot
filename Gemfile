@@ -26,6 +26,7 @@ group :jekyll_plugins do
   gem "typhoeus"
   gem "fileutils"
   gem "json"
+  gem "logger"
   gem "yaml"
 end
 
