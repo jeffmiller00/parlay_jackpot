@@ -1,6 +1,6 @@
 ---
 season: 2026
-version: 1788989542
+version: 1789050086
 weeks:
 - week: 1
   total_potential: 8420
@@ -12,20 +12,20 @@ weeks:
       worst: false
       odds: ''
     adam:
-      pick: ___
+      pick: Rams ML
       status: pending
       worst: false
-      odds: ''
+      odds: "-215"
     sam:
       pick: Kenneth Walker anytime TD
       status: pending
       worst: false
       odds: ''
     jeff:
-      pick: ___
+      pick: Dallas Cowboys -3
       status: pending
       worst: false
-      odds: ''
+      odds: "-107"
     mr_gaddi:
       pick: D. Achane Alt Rushing Yards 60+
       status: pending
@@ -37,10 +37,10 @@ weeks:
       worst: false
       odds: ''
     joe:
-      pick: ___
+      pick: KC Concepcion 4+ receptions
       status: pending
       worst: false
-      odds: ''
+      odds: "+102"
     jma:
       pick: Kentucky  + 14.5  vs Alabama
       status: pending
@@ -57,17 +57,17 @@ weeks:
       worst: false
       odds: "-114"
     josh:
-      pick: ___
+      pick: Trevor Lawrence 1+ td pass (1st half)
       status: pending
       worst: false
-      odds: ''
+      odds: "-182"
     yerkes:
       pick: Loveland touchdown
       status: pending
       worst: false
       odds: "+185"
     piers:
-      pick: ___
+      pick: Amon-Ra St. Brown anytime TD
       status: pending
       worst: false
-      odds: ''
+      odds: "-109"
