@@ -78,10 +78,12 @@ rescue JSON::ParserError
   nil
 end
 
-api_key = ENV['OPENAI_KEY'] || ENV['OPENAI_API_KEY']
-if api_key.nil? || api_key.strip.empty?
-  abort 'No OPENAI_KEY / OPENAI_API_KEY set.'
-end
+api_key = (ENV['OPENAI_KEY'] || ENV['OPENAI_API_KEY']).to_s.strip
+abort 'No OPENAI_KEY / OPENAI_API_KEY set.' if api_key.empty?
+# A stray trailing newline in the secret (easy to introduce when setting it)
+# breaks the HTTP header/body framing when libcurl writes the raw
+# "Authorization: Bearer ...\n" header, corrupting the request in a way
+# that shows up as OpenAI rejecting the body as invalid JSON.
 
 content = YAML.load_file(DATA_FILE)
 weeks   = content['weeks'] || []
