@@ -30,7 +30,6 @@ body = JSON.dump(
 puts "Ruby version: #{RUBY_VERSION}"
 puts "Typhoeus version: #{Typhoeus::VERSION}"
 puts "Ethon version: #{Ethon::VERSION}" if defined?(Ethon::VERSION)
-puts "libcurl version: #{Ethon::Curl.curl_version}" if defined?(Ethon::Curl)
 puts "Body bytesize: #{body.bytesize}"
 puts "Body encoding: #{body.encoding}"
 puts "Body valid encoding?: #{body.valid_encoding?}"
