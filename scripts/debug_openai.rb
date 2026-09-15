@@ -10,6 +10,15 @@ require 'dotenv/load'
 api_key = ENV['OPENAI_KEY'] || ENV['OPENAI_API_KEY']
 abort 'No OPENAI_KEY set.' if api_key.nil? || api_key.strip.empty?
 
+puts "api_key.length: #{api_key.length}"
+puts "api_key.bytesize: #{api_key.bytesize}"
+puts "api_key == api_key.strip: #{api_key == api_key.strip}"
+puts "api_key has leading/trailing whitespace: #{api_key != api_key.strip}"
+puts "api_key contains \\n: #{api_key.include?("\n")}"
+puts "api_key contains \\r: #{api_key.include?("\r")}"
+puts "api_key encoding: #{api_key.encoding}"
+puts "api_key valid encoding?: #{api_key.valid_encoding?}"
+
 prompt = 'This bet was placed for week 1 of the 2026 football season. The games ran ' \
          '2026-09-10 through 2026-09-15. It may be an NFL game or a college football ' \
          'game - do not assume NFL. College football week numbers do not match NFL ' \
