@@ -8,12 +8,19 @@ Picks are collected in the Google Sheet (one tab per week, named `Week N 2026`),
 then imported. Cloudflare Pages deploys on every push to `main`, so committing
 the data file is all it takes to publish.
 
-```bash
-# start a new week and pull whatever picks are in the sheet
-bundle exec ruby scripts/import_picks.rb --new-week
+The importer reads the sheet's real tab list (from its xlsx export, since a
+gviz request for a tab name that doesn't exist silently falls back to a
+leftover hidden tab instead of erroring) and appends the next week on its own
+the first time that week's tab shows up - nobody has to remember to run
+`--new-week`. `--new-week` still exists as a manual override, for example to
+force-add a week ahead of its tab appearing.
 
-# re-run any time during the week to pick up late entries (idempotent)
+```bash
+# pull whatever picks are in the sheet; auto-adds the next week if its tab now exists
 bundle exec ruby scripts/import_picks.rb
+
+# force-add the next week even if the sheet doesn't have its tab yet
+bundle exec ruby scripts/import_picks.rb --new-week
 
 # after Monday Night Football, grade the week
 bundle exec ruby scripts/grade_picks.rb
@@ -25,7 +32,9 @@ already been graded.
 Two scheduled workflows do this unattended and commit the result:
 `import-picks.yml` (daily, plus a Thursday pre-kickoff sweep) and
 `grade-picks.yml` (Tuesday morning). Both can be run on demand from the Actions
-tab. Grading needs an `OPENAI_KEY` repository secret.
+tab. Grading needs an `OPENAI_KEY` repository secret, and only grades weeks
+that exist in `_data/weeks.yml`, so it still depends on a week having been
+imported (automatically or otherwise) first.
 
 Still done by hand in `_data/weeks.yml`:
 

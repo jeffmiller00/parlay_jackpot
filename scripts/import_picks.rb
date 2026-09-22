@@ -19,6 +19,7 @@ require 'csv'
 require 'cgi'
 require 'optparse'
 require 'typhoeus'
+require 'zlib'
 
 ROOT        = File.expand_path('..', __dir__)
 DATA_FILE   = File.join(ROOT, '_data', 'weeks.yml')
@@ -56,7 +57,11 @@ def blank_picks_for(players)
   end
 end
 
-# gviz answers 200 with an HTML error body when the tab does not exist.
+# gviz's fallback behavior for an unknown sheet= name is NOT a reliable 404:
+# on this spreadsheet it silently serves a leftover hidden tab from a past
+# season instead of an HTML error. So tab existence is decided beforehand by
+# sheet_names (an authoritative list from the workbook itself), and fetch_tab
+# is only ever called with a name already confirmed to exist.
 def fetch_tab(name)
   url = "https://docs.google.com/spreadsheets/d/#{SHEET_ID}/gviz/tq" \
         "?tqx=out:csv&headers=1&sheet=#{CGI.escape(name)}"
@@ -68,6 +73,68 @@ def fetch_tab(name)
   return nil if body.lstrip.start_with?('<')
 
   body
+end
+
+# Extract one file's bytes from a zip archive already in memory. Just enough
+# of the zip format to read xl/workbook.xml out of an xlsx export - not a
+# general-purpose unzip.
+def zip_entry(data, path)
+  eocd_pos = data.rindex("PK\x05\x06")
+  return nil unless eocd_pos
+
+  cd_size   = data[eocd_pos + 12, 4].unpack1('V')
+  cd_offset = data[eocd_pos + 16, 4].unpack1('V')
+
+  pos = cd_offset
+  while pos < cd_offset + cd_size
+    break unless data[pos, 4] == "PK\x01\x02"
+
+    method       = data[pos + 10, 2].unpack1('v')
+    comp_size    = data[pos + 20, 4].unpack1('V')
+    name_len     = data[pos + 28, 2].unpack1('v')
+    extra_len    = data[pos + 30, 2].unpack1('v')
+    comment_len  = data[pos + 32, 2].unpack1('v')
+    local_offset = data[pos + 42, 4].unpack1('V')
+    name         = data[pos + 46, name_len]
+
+    if name == path
+      lh_name_len  = data[local_offset + 26, 2].unpack1('v')
+      lh_extra_len = data[local_offset + 28, 2].unpack1('v')
+      data_start   = local_offset + 30 + lh_name_len + lh_extra_len
+      raw          = data[data_start, comp_size]
+      return method.zero? ? raw : Zlib::Inflate.new(-Zlib::MAX_WBITS).inflate(raw)
+    end
+
+    pos += 46 + name_len + extra_len + comment_len
+  end
+  nil
+end
+
+# The real, authoritative list of tab names in the sheet (hidden tabs from
+# past seasons excluded), read from the xlsx export's workbook.xml. Returns
+# nil - rather than aborting - if the sheet can't be fetched or parsed, so a
+# transient failure here degrades to the old per-tab-guess behavior instead
+# of breaking the whole import.
+def sheet_names
+  url = "https://docs.google.com/spreadsheets/d/#{SHEET_ID}/export?format=xlsx"
+  res = Typhoeus.get(url, followlocation: true, timeout: 30)
+  return nil unless res.success?
+
+  xml = zip_entry(res.body, 'xl/workbook.xml')
+  return nil if xml.nil?
+
+  names = []
+  xml.scan(/<sheet\b([^>]*)\/>/).each do |(attrs)|
+    name  = attrs[/\bname="([^"]*)"/, 1]
+    state = attrs[/\bstate="([^"]*)"/, 1] || 'visible'
+    next if name.nil? || state == 'hidden'
+
+    names << CGI.unescapeHTML(name)
+  end
+  names
+rescue StandardError => e
+  warn "Could not read the sheet's tab list (#{e.message}); skipping auto-advance check."
+  nil
 end
 
 def resolve_column(headers, *prefixes)
@@ -88,9 +155,10 @@ players.each do |p|
   lookup[p['id'].to_s.downcase.strip]   = p['id']
 end
 
-content = YAML.load_file(DATA_FILE)
-weeks   = (content['weeks'] ||= [])
-season  = content['season'] || Time.now.year
+content   = YAML.load_file(DATA_FILE)
+weeks     = (content['weeks'] ||= [])
+season    = content['season'] || Time.now.year
+available = sheet_names
 
 if options[:new_week]
   next_num = (weeks.map { |w| w['week'].to_i }.max || 0) + 1
@@ -101,6 +169,20 @@ if options[:new_week]
     'picks' => blank_picks_for(players)
   )
   puts "Added week #{next_num}."
+elsif available
+  # No one has to remember to run --new-week: once the sheet grows a tab for
+  # the next week, the next scheduled import notices and appends it itself.
+  next_num = (weeks.map { |w| w['week'].to_i }.max || 0) + 1
+  next_candidates = ["Week #{next_num} #{season}", "Week #{next_num}", "Week#{next_num}"]
+  if weeks.none? { |w| w['week'].to_i == next_num } && next_candidates.any? { |c| available.include?(c) }
+    weeks.unshift(
+      'week' => next_num,
+      'total_potential' => 0,
+      'worst_rationale' => '___',
+      'picks' => blank_picks_for(players)
+    )
+    puts "Sheet has a tab for week #{next_num} now - added it automatically."
+  end
 end
 
 target = options[:week] || weeks.map { |w| w['week'].to_i }.max || 1
@@ -119,9 +201,12 @@ players.each do |p|
 end
 
 candidates = ["Week #{target} #{season}", "Week #{target}", "Week#{target}"]
+# When we have the real tab list, only try names confirmed to exist - trying
+# an unconfirmed name risks the gviz fallback described above fetch_tab.
+try_list = available ? candidates.select { |c| available.include?(c) } : candidates
 body = nil
 used = nil
-candidates.each do |name|
+try_list.each do |name|
   body = fetch_tab(name)
   if body
     used = name
