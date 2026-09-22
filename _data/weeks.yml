@@ -1,73 +1,142 @@
 ---
 season: 2026
-version: 1789492987
+version: 1790079619
 weeks:
-  - week: 1
-    total_potential: 8420
-    worst_rationale: ___
-    picks:
-      andy:
-        pick: Omarian Hampton +60 rushing yards
-        status: ai_lost
-        worst: false
-        odds: ""
-      adam:
-        pick: Rams ML
-        status: lost
-        worst: false
-        odds: "-215"
-      sam:
-        pick: Kenneth Walker anytime TD
-        status: ai_won
-        worst: false
-        odds: ""
-      jeff:
-        pick: Dallas Cowboys -3
-        status: ai_lost
-        worst: false
-        odds: "-107"
-      mr_gaddi:
-        pick: D. Achane Alt Rushing Yards 60+
-        status: ai_lost
-        worst: false
-        odds: ""
-      brad:
-        pick: Cam Ward under 0.5 INT
-        status: ai_won
-        worst: false
-        odds: ""
-      joe:
-        pick: KC Concepcion 4+ receptions
-        status: ai_won
-        worst: false
-        odds: "+102"
-      jma:
-        pick: Kentucky + 14.5 vs Alabama
-        status: ai_lost
-        worst: false
-        odds: "-175"
-      mike:
-        pick: AJ Brown O 62.5 rec yards
-        status: lost
-        worst: false
-        odds: "-114"
-      daniel:
-        pick: Cam Ward O 8.5 rushing yards
-        status: ai_won
-        worst: false
-        odds: "-114"
-      josh:
-        pick: Trevor Lawrence 1+ td pass (1st half)
-        status: ai_won
-        worst: false
-        odds: "-182"
-      yerkes:
-        pick: Loveland touchdown
-        status: ai_lost
-        worst: false
-        odds: "+185"
-      piers:
-        pick: Amon-Ra St. Brown anytime TD
-        status: ai_won
-        worst: false
-        odds: "-109"
+- week: 2
+  total_potential: 0
+  worst_rationale: ___
+  picks:
+    andy:
+      pick: Burden +50 receiving yards
+      status: pending
+      worst: false
+      odds: ''
+    adam:
+      pick: Justin Jefferson O 6.5 receptions
+      status: pending
+      worst: false
+      odds: "-108"
+    sam:
+      pick: San Fransisco ML
+      status: pending
+      worst: false
+      odds: ''
+    jeff:
+      pick: KC -6
+      status: pending
+      worst: false
+      odds: ''
+    mr_gaddi:
+      pick: Ashton Jeanty Anytime TD
+      status: pending
+      worst: false
+      odds: "-110"
+    brad:
+      pick: Jordan Love under 0.5 INT
+      status: pending
+      worst: false
+      odds: ''
+    joe:
+      pick: Mike Evans over 3.5 receptions
+      status: pending
+      worst: false
+      odds: "-122"
+    jma:
+      pick: Bears ML
+      status: pending
+      worst: false
+      odds: ''
+    mike:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    daniel:
+      pick: DJ Moore o63.5 rec yards
+      status: pending
+      worst: false
+      odds: "-113"
+    josh:
+      pick: Bucky Irving +60 yards rushing
+      status: pending
+      worst: false
+      odds: "-120"
+    yerkes:
+      pick: Caleb Williams over 225 passing yards
+      status: pending
+      worst: false
+      odds: "-120"
+    piers:
+      pick: Breece Hall anytime TD
+      status: pending
+      worst: false
+      odds: "-109"
+- week: 1
+  total_potential: 8420
+  worst_rationale: ___
+  picks:
+    andy:
+      pick: Omarian Hampton +60 rushing yards
+      status: ai_lost
+      worst: false
+      odds: ''
+    adam:
+      pick: Rams ML
+      status: lost
+      worst: false
+      odds: "-215"
+    sam:
+      pick: Kenneth Walker anytime TD
+      status: ai_won
+      worst: false
+      odds: ''
+    jeff:
+      pick: Dallas Cowboys -3
+      status: ai_lost
+      worst: false
+      odds: "-107"
+    mr_gaddi:
+      pick: D. Achane Alt Rushing Yards 60+
+      status: ai_lost
+      worst: false
+      odds: ''
+    brad:
+      pick: Cam Ward under 0.5 INT
+      status: ai_won
+      worst: false
+      odds: ''
+    joe:
+      pick: KC Concepcion 4+ receptions
+      status: ai_won
+      worst: false
+      odds: "+102"
+    jma:
+      pick: Kentucky + 14.5 vs Alabama
+      status: ai_lost
+      worst: false
+      odds: "-175"
+    mike:
+      pick: AJ Brown O 62.5 rec yards
+      status: lost
+      worst: false
+      odds: "-114"
+    daniel:
+      pick: Cam Ward O 8.5 rushing yards
+      status: ai_won
+      worst: false
+      odds: "-114"
+    josh:
+      pick: Trevor Lawrence 1+ td pass (1st half)
+      status: ai_won
+      worst: false
+      odds: "-182"
+    yerkes:
+      pick: Loveland touchdown
+      status: ai_lost
+      worst: false
+      odds: "+185"
+    piers:
+      pick: Amon-Ra St. Brown anytime TD
+      status: ai_won
+      worst: false
+      odds: "-109"
