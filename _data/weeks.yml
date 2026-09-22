@@ -1,6 +1,6 @@
 ---
 season: 2026
-version: 1790079619
+version: 1790079916
 weeks:
 - week: 2
   total_potential: 0
@@ -8,37 +8,37 @@ weeks:
   picks:
     andy:
       pick: Burden +50 receiving yards
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     adam:
       pick: Justin Jefferson O 6.5 receptions
-      status: pending
+      status: ai_lost
       worst: false
       odds: "-108"
     sam:
       pick: San Fransisco ML
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     jeff:
       pick: KC -6
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     mr_gaddi:
       pick: Ashton Jeanty Anytime TD
-      status: pending
+      status: ai_lost
       worst: false
       odds: "-110"
     brad:
       pick: Jordan Love under 0.5 INT
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     joe:
       pick: Mike Evans over 3.5 receptions
-      status: pending
+      status: ai_lost
       worst: false
       odds: "-122"
     jma:
@@ -58,17 +58,17 @@ weeks:
       odds: "-113"
     josh:
       pick: Bucky Irving +60 yards rushing
-      status: pending
+      status: ai_won
       worst: false
       odds: "-120"
     yerkes:
       pick: Caleb Williams over 225 passing yards
-      status: pending
+      status: ai_lost
       worst: false
       odds: "-120"
     piers:
       pick: Breece Hall anytime TD
-      status: pending
+      status: ai_lost
       worst: false
       odds: "-109"
 - week: 1
