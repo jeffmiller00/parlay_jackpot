@@ -1,7 +1,76 @@
 ---
 season: 2026
-version: 1790080160
+version: 1790524505
 weeks:
+- week: 3
+  total_potential: 0
+  worst_rationale: ___
+  picks:
+    andy:
+      pick: Saints -3
+      status: pending
+      worst: false
+      odds: ''
+    adam:
+      pick: Chris Olave O76.5 receiving yards
+      status: pending
+      worst: false
+      odds: ''
+    sam:
+      pick: Bills ML
+      status: pending
+      worst: false
+      odds: ''
+    jeff:
+      pick: AZ Cardinals +9
+      status: pending
+      worst: false
+      odds: ''
+    mr_gaddi:
+      pick: Chiefs ML
+      status: pending
+      worst: false
+      odds: ''
+    brad:
+      pick: Jags -2.5
+      status: pending
+      worst: false
+      odds: ''
+    joe:
+      pick: Darnell Mooney over 1.5 receptions
+      status: pending
+      worst: false
+      odds: ''
+    jma:
+      pick: James Cook  anytime TD
+      status: pending
+      worst: false
+      odds: ''
+    mike:
+      pick: Sea -2.5 vs Was Q1
+      status: pending
+      worst: false
+      odds: "-114"
+    daniel:
+      pick: Jalen McMillan o14.5 rec yards
+      status: pending
+      worst: false
+      odds: "-113"
+    josh:
+      pick: Dallas wings +7.5
+      status: pending
+      worst: false
+      odds: ''
+    yerkes:
+      pick: Jadarian Price ATTD
+      status: pending
+      worst: false
+      odds: ''
+    piers:
+      pick: James Cook over 90 rush yards
+      status: pending
+      worst: false
+      odds: ''
 - week: 2
   total_potential: 0
   worst_rationale: ___
