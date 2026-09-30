@@ -3,7 +3,7 @@ season: 2026
 version: 1790708803
 weeks:
 - week: 3
-  total_potential: 0
+  total_potential: 9160
   worst_rationale: ___
   picks:
     andy:
@@ -58,7 +58,7 @@ weeks:
       odds: "-113"
     josh:
       pick: Dallas wings +7.5
-      status: pending
+      status: lost
       worst: false
       odds: ''
     yerkes:
