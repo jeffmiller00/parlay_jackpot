@@ -1,7 +1,76 @@
 ---
 season: 2026
-version: 1790708803
+version: 1791040796
 weeks:
+- week: 4
+  total_potential: 0
+  worst_rationale: ___
+  picks:
+    andy:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    adam:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    sam:
+      pick: Cowboys ML
+      status: pending
+      worst: false
+      odds: ''
+    jeff:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    mr_gaddi:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    brad:
+      pick: Bills ML
+      status: pending
+      worst: false
+      odds: ''
+    joe:
+      pick: Bryce Young 200+ yards
+      status: pending
+      worst: false
+      odds: "-340"
+    jma:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    mike:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    daniel:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    josh:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    yerkes:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
+    piers:
+      pick: ___
+      status: pending
+      worst: false
+      odds: ''
 - week: 3
   total_potential: 9160
   worst_rationale: ___
