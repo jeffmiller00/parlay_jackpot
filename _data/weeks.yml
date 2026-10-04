@@ -1,18 +1,18 @@
 ---
 season: 2026
-version: 1791040796
+version: 1791129884
 weeks:
 - week: 4
   total_potential: 0
   worst_rationale: ___
   picks:
     andy:
-      pick: ___
+      pick: Loveland plus 30 receiving yards
       status: pending
       worst: false
       odds: ''
     adam:
-      pick: ___
+      pick: Jaylen Wright (dolphins) O27.5 rush yards
       status: pending
       worst: false
       odds: ''
@@ -22,15 +22,15 @@ weeks:
       worst: false
       odds: ''
     jeff:
-      pick: ___
+      pick: Rams +3.5
       status: pending
       worst: false
       odds: ''
     mr_gaddi:
-      pick: ___
+      pick: D'Andre Swift 50+ yards
       status: pending
       worst: false
-      odds: ''
+      odds: "-240"
     brad:
       pick: Bills ML
       status: pending
@@ -40,34 +40,34 @@ weeks:
       pick: Bryce Young 200+ yards
       status: pending
       worst: false
-      odds: "-340"
+      odds: "-290"
     jma:
-      pick: ___
+      pick: James Cook anytime TD
       status: pending
       worst: false
       odds: ''
     mike:
-      pick: ___
+      pick: LV Raiders +4.5
       status: pending
       worst: false
       odds: ''
     daniel:
-      pick: ___
+      pick: Kyren over 60
       status: pending
       worst: false
       odds: ''
     josh:
-      pick: ___
+      pick: Steveson over 33.5 rushing yards
       status: pending
       worst: false
-      odds: ''
+      odds: "-113"
     yerkes:
-      pick: ___
+      pick: Tyson bagent over 175 yards
       status: pending
       worst: false
       odds: ''
     piers:
-      pick: ___
+      pick: Bengals ML
       status: pending
       worst: false
       odds: ''
