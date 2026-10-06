@@ -18,12 +18,12 @@ weeks:
       odds: ''
     sam:
       pick: Cowboys ML
-      status: pending
+      status: won
       worst: false
       odds: ''
     jeff:
       pick: Rams +3.5
-      status: pending
+      status: won
       worst: false
       odds: ''
     mr_gaddi:
