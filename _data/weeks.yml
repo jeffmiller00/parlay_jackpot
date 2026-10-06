@@ -1,6 +1,6 @@
 ---
 season: 2026
-version: 1791129884
+version: 1791293495
 weeks:
 - week: 4
   total_potential: 3549
@@ -8,12 +8,12 @@ weeks:
   picks:
     andy:
       pick: Loveland plus 30 receiving yards
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     adam:
       pick: Jaylen Wright (dolphins) O27.5 rush yards
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     sam:
@@ -28,47 +28,47 @@ weeks:
       odds: ''
     mr_gaddi:
       pick: D'Andre Swift 50+ yards
-      status: pending
+      status: ai_won
       worst: false
       odds: "-240"
     brad:
       pick: Bills ML
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     joe:
       pick: Bryce Young 200+ yards
-      status: pending
+      status: ai_won
       worst: false
       odds: "-290"
     jma:
       pick: James Cook anytime TD
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     mike:
       pick: LV Raiders +4.5
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     daniel:
       pick: Kyren over 60
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     josh:
       pick: Steveson over 33.5 rushing yards
-      status: pending
+      status: ai_won
       worst: false
       odds: "-113"
     yerkes:
       pick: Tyson bagent over 175 yards
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     piers:
       pick: Bengals ML
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
 - week: 3
