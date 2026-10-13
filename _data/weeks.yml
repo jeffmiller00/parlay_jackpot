@@ -1,6 +1,6 @@
 ---
 season: 2026
-version: 1791737662
+version: 1791921917
 weeks:
 - week: 5
   total_potential: 0
@@ -8,12 +8,12 @@ weeks:
   picks:
     andy:
       pick: Odunze +40 yards receiving
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     adam:
       pick: Charges +3.5
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     sam:
@@ -28,7 +28,7 @@ weeks:
       odds: ''
     mr_gaddi:
       pick: Loveland  anytime TD
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     brad:
@@ -38,12 +38,12 @@ weeks:
       odds: ''
     joe:
       pick: Jeremiyah Love 2+ receptions
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     jma:
       pick: James Cook anytime TD
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     mike:
@@ -53,7 +53,7 @@ weeks:
       odds: ''
     daniel:
       pick: Marvin Mims 2+ receptions
-      status: pending
+      status: ai_won
       worst: false
       odds: "+102"
     josh:
@@ -68,7 +68,7 @@ weeks:
       odds: ''
     piers:
       pick: McCaffrey 50+ rush yards
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
 - week: 4
