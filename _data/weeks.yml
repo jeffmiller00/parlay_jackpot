@@ -1,6 +1,6 @@
 ---
 season: 2026
-version: 1793036817
+version: 1793128472
 weeks:
 - week: 7
   total_potential: 0
@@ -8,7 +8,7 @@ weeks:
   picks:
     andy:
       pick: Giants -10.5
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     adam:
@@ -18,7 +18,7 @@ weeks:
       odds: ''
     sam:
       pick: Tre Tucker over 3.5 receptions
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     jeff:
@@ -28,37 +28,37 @@ weeks:
       odds: ''
     mr_gaddi:
       pick: Justin Jefferson alt receiving yards +70
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     brad:
       pick: Denver ML
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     joe:
       pick: Tyler Allgeier over 30.5 yds rushing
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     jma:
       pick: Derrick Henry  anytime TD
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     mike:
       pick: Matthew Golden O73 rec yards
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     daniel:
       pick: Tutu Atwell o8.5 rec yards
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     josh:
       pick: George "don't call me Greg" Kittle 60+ yards
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     yerkes:
@@ -68,7 +68,7 @@ weeks:
       odds: ''
     piers:
       pick: Amon-Ra St Brown anytime TD
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
 - week: 6
