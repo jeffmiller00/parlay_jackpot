@@ -13,7 +13,7 @@ weeks:
       odds: ''
     adam:
       pick: Falcons +2.5
-      status: pending
+      status: lost
       worst: false
       odds: ''
     sam:
@@ -48,7 +48,7 @@ weeks:
       odds: ''
     mike:
       pick: Taylor Under 70.5 total yards
-      status: pending
+      status: won
       worst: false
       odds: ''
     daniel:
