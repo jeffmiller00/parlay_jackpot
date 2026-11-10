@@ -8,7 +8,7 @@ weeks:
   picks:
     andy:
       pick: Cards +8.5
-      status: pending
+      status: lost
       worst: false
       odds: ''
     adam:
@@ -33,7 +33,7 @@ weeks:
       odds: ''
     brad:
       pick: Bears moneyline
-      status: pending
+      status: won
       worst: false
       odds: ''
     joe:
@@ -43,7 +43,7 @@ weeks:
       odds: ''
     jma:
       pick: Cook Anytime TD
-      status: pending
+      status: won
       worst: false
       odds: ''
     mike:
