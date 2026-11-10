@@ -76,7 +76,7 @@ def fetch_tab(name)
 end
 
 # Extract one file's bytes from a zip archive already in memory. Just enough
-# of the zip format to read xl/workbook.xml out of an xlsx export - not a
+# of the zip format to read content.xml out of an ods export - not a
 # general-purpose unzip.
 def zip_entry(data, path)
   eocd_pos = data.rindex("PK\x05\x06")
@@ -111,30 +111,52 @@ def zip_entry(data, path)
 end
 
 # The real, authoritative list of tab names in the sheet (hidden tabs from
-# past seasons excluded), read from the xlsx export's workbook.xml. Returns
-# nil - rather than aborting - if the sheet can't be fetched or parsed, so a
-# transient failure here degrades to the old per-tab-guess behavior instead
-# of breaking the whole import.
+# past seasons excluded), read from the ods export's content.xml. The ods
+# export is used rather than xlsx because xlsx cuts tab names to Excel's 31
+# characters, and gviz serves the wrong (hidden, past-season) tab when asked
+# for a truncated name. Returns nil - rather than aborting - if the sheet
+# can't be fetched or parsed, so a transient failure here degrades to the
+# exact-name guesses instead of breaking the whole import.
 def sheet_names
-  url = "https://docs.google.com/spreadsheets/d/#{SHEET_ID}/export?format=xlsx"
-  res = Typhoeus.get(url, followlocation: true, timeout: 30)
+  url = "https://docs.google.com/spreadsheets/d/#{SHEET_ID}/export?format=ods"
+  res = Typhoeus.get(url, followlocation: true, timeout: 60)
   return nil unless res.success?
 
-  xml = zip_entry(res.body, 'xl/workbook.xml')
+  xml = zip_entry(res.body, 'content.xml')
   return nil if xml.nil?
 
+  xml = xml.force_encoding('UTF-8')
+
+  # Visibility lives on the table's automatic style, not the table itself.
+  hidden_styles = xml.scan(/<style:style\b[^>]*\bstyle:name="([^"]*)"[^>]*>\s*<style:table-properties\b[^>]*\btable:display="false"/)
+                     .flatten
   names = []
-  xml.scan(/<sheet\b([^>]*)\/>/).each do |(attrs)|
-    name  = attrs[/\bname="([^"]*)"/, 1]
-    state = attrs[/\bstate="([^"]*)"/, 1] || 'visible'
-    next if name.nil? || state == 'hidden'
+  xml.scan(/<table:table\b([^>]*)>/).each do |(attrs)|
+    name  = attrs[/\btable:name="([^"]*)"/, 1]
+    style = attrs[/\btable:style-name="([^"]*)"/, 1]
+    next if name.nil? || hidden_styles.include?(style)
 
     names << CGI.unescapeHTML(name)
   end
   names
 rescue StandardError => e
-  warn "Could not read the sheet's tab list (#{e.message}); skipping auto-advance check."
+  warn "Could not read the sheet's tab list (#{e.message}); falling back to exact tab names."
   nil
+end
+
+# Tabs for a week, best match first. The tab only has to contain "Week N" as a
+# whole word ("Week 8 2026 A.S.T. (After Simmons Trade)" counts; "Week 80"
+# does not), so the exact conventional names are tried first, then any tab
+# that names the season, then any other match.
+def week_tabs(available, num, season)
+  exact = ["Week #{num} #{season}", "Week #{num}", "Week#{num}"]
+  return exact if available.nil?
+
+  pattern = /\bweek\s*#{num}(?!\d)/i
+  loose   = available.select { |n| n.match?(pattern) }
+  (exact.select { |c| available.include?(c) } +
+    loose.select { |n| n.include?(season.to_s) } +
+    loose).uniq
 end
 
 def resolve_column(headers, *prefixes)
@@ -173,8 +195,7 @@ elsif available
   # No one has to remember to run --new-week: once the sheet grows a tab for
   # the next week, the next scheduled import notices and appends it itself.
   next_num = (weeks.map { |w| w['week'].to_i }.max || 0) + 1
-  next_candidates = ["Week #{next_num} #{season}", "Week #{next_num}", "Week#{next_num}"]
-  if weeks.none? { |w| w['week'].to_i == next_num } && next_candidates.any? { |c| available.include?(c) }
+  if weeks.none? { |w| w['week'].to_i == next_num } && week_tabs(available, next_num, season).any?
     weeks.unshift(
       'week' => next_num,
       'total_potential' => 0,
@@ -200,10 +221,10 @@ players.each do |p|
   puts "Added missing player to week #{target}: #{p['id']}"
 end
 
-candidates = ["Week #{target} #{season}", "Week #{target}", "Week#{target}"]
-# When we have the real tab list, only try names confirmed to exist - trying
-# an unconfirmed name risks the gviz fallback described above fetch_tab.
-try_list = available ? candidates.select { |c| available.include?(c) } : candidates
+# When we have the real tab list, only names confirmed to exist are tried -
+# trying an unconfirmed name risks the gviz fallback described above fetch_tab.
+try_list = week_tabs(available, target, season)
+warn "Several tabs match week #{target}: #{try_list.inspect} - using the first." if available && try_list.size > 1
 body = nil
 used = nil
 try_list.each do |name|
@@ -213,7 +234,7 @@ try_list.each do |name|
     break
   end
 end
-abort "Could not read any of these tabs from the sheet: #{candidates.inspect}" if body.nil?
+abort "Could not read a tab for week #{target} from the sheet (tried #{try_list.inspect})" if body.nil?
 
 puts "Reading tab #{used.inspect} for season #{season}, week #{target}."
 
