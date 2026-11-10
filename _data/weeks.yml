@@ -102,7 +102,7 @@ weeks:
       odds: ''
     brad:
       pick: Josh Allen NE Thyme
-      status: pending
+      status: lost
       worst: false
       odds: ''
     joe:
@@ -156,7 +156,7 @@ weeks:
       odds: ''
     sam:
       pick: Mike Wilson Anytime
-      status: pending
+      status: lost
       worst: false
       odds: ''
     jeff:
@@ -171,7 +171,7 @@ weeks:
       odds: ''
     brad:
       pick: Swift 70+ yards
-      status: pending
+      status: lost
       worst: false
       odds: ''
     joe:
@@ -196,7 +196,7 @@ weeks:
       odds: "+102"
     josh:
       pick: Lions -5.5
-      status: pending
+      status: lost
       worst: false
       odds: ''
     yerkes:
