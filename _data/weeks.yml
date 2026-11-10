@@ -1,6 +1,6 @@
 ---
 season: 2026
-version: 1794341614
+version: 1794342026
 weeks:
 - week: 8
   total_potential: 0
@@ -8,7 +8,7 @@ weeks:
   picks:
     andy:
       pick: TLaw +230 passing yards
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     adam:
@@ -18,32 +18,32 @@ weeks:
       odds: ''
     sam:
       pick: Gibbs anytime
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     jeff:
       pick: Jacksonville Jaguars -10
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     mr_gaddi:
       pick: Patriots ML
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     brad:
       pick: Detroit ML
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     joe:
       pick: Bucky Irving 3+ receptions
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     jma:
       pick: James Cook Anytime TD
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     mike:
@@ -53,12 +53,12 @@ weeks:
       odds: ''
     daniel:
       pick: TeSlaa o 1.5 receptions
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     josh:
       pick: PHI/WAS OVER 40.5
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     yerkes:
@@ -68,7 +68,7 @@ weeks:
       odds: ''
     piers:
       pick: CeeDee Lamb Anytime TD
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
 - week: 7
