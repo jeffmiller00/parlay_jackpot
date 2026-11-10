@@ -1,6 +1,6 @@
 ---
 season: 2026
-version: 1794343501
+version: 1794348443
 weeks:
 - week: 9
   total_potential: 0
@@ -38,7 +38,7 @@ weeks:
       odds: ''
     joe:
       pick: Swift any time TD
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     jma:
