@@ -13,7 +13,7 @@ weeks:
       odds: ''
     adam:
       pick: Lions ML
-      status: pending
+      status: won
       worst: false
       odds: ''
     sam:
@@ -23,7 +23,7 @@ weeks:
       odds: ''
     jeff:
       pick: Vikings -3 alt or -7
-      status: pending
+      status: won
       worst: false
       odds: ''
     mr_gaddi:
