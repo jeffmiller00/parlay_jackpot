@@ -1,6 +1,6 @@
 ---
 season: 2026
-version: 1794765938
+version: 1794952958
 weeks:
 - week: 10
   total_potential: 0
@@ -8,12 +8,12 @@ weeks:
   picks:
     andy:
       pick: Justin Jefferson +6 receptions
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     adam:
       pick: Houston -4.5
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     sam:
@@ -23,22 +23,22 @@ weeks:
       odds: ''
     jeff:
       pick: Jets +10.5
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     mr_gaddi:
       pick: Josh Allen Alt Passing Yards 200+
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     brad:
       pick: Chiefs ML
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     joe:
       pick: Olave 60+ yards
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     jma:
@@ -53,12 +53,12 @@ weeks:
       odds: ''
     daniel:
       pick: Jordan Watkins 25+ rec yards
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     josh:
       pick: MIA +4.5
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     yerkes:
@@ -68,7 +68,7 @@ weeks:
       odds: ''
     piers:
       pick: Stafford 220+ passing yards
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
 - week: 9
