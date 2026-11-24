@@ -1,6 +1,6 @@
 ---
 season: 2026
-version: 1795373173
+version: 1795562651
 weeks:
 - week: 11
   total_potential: 0
@@ -8,27 +8,27 @@ weeks:
   picks:
     andy:
       pick: Rome +40 receiving yards
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     adam:
       pick: Bears Swift anytime TD
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     sam:
       pick: Chiefs ML
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     jeff:
       pick: Josh Allen under rushing 23.5
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     mr_gaddi:
       pick: McCaffrey Anytime TD
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     brad:
@@ -38,7 +38,7 @@ weeks:
       odds: ''
     joe:
       pick: Bills ML
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
     jma:
@@ -53,7 +53,7 @@ weeks:
       odds: ''
     daniel:
       pick: monangai o46.5
-      status: pending
+      status: ai_lost
       worst: false
       odds: ''
     josh:
@@ -68,7 +68,7 @@ weeks:
       odds: ''
     piers:
       pick: Purdy 220+ passing yards
-      status: pending
+      status: ai_won
       worst: false
       odds: ''
 - week: 10
